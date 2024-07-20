@@ -198,6 +198,9 @@ button {
 .header__wrapper .header__content__wrapper .header__content .header__nav ul li .dropdown__list li a:hover {
   color: #182cc0;
 }
+.header__wrapper .header__content__wrapper .header__content .header__nav ul li .hidden {
+  display: none;
+}
 .header__wrapper .header__content__wrapper .header__content .header__btns_wrapper {
   display: flex;
   gap: 1.6rem;
@@ -278,4 +281,7 @@ button {
 .header__wrapper .header__dropDown .header__drDown_content span:hover {
   color: #4ca2d4;
   transition: 0.6s ease-out;
+}
+.header__wrapper .hidden {
+  display: none;
 }/*# sourceMappingURL=global.css.map */
