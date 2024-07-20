@@ -1,0 +1,160 @@
+.footer__wrapper {
+  width: 100%;
+  background-color: $white_color;
+  .footer_content {
+    max-width: 111rem;
+    width: 100%;
+    margin: 0 auto;
+
+    padding-bottom: 4.5rem;
+    .tbc_logo {
+      display: flex;
+      justify-content: space-between;
+
+      padding-bottom: 5rem;
+      div {
+        cursor: pointer;
+      }
+      .language__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+
+        padding: 0.8rem;
+
+        cursor: pointer;
+        span {
+          color: $tbc_logo_color;
+          font-size: 1.4rem;
+          font-weight: 700;
+          line-height: 1.7;
+        }
+      }
+      .language__wrapper:hover {
+        background-color: $lang_bg_hover;
+        border-radius: 0.4rem;
+        transition: 0.6s ease-out;
+      }
+    }
+    .footer__description {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.4rem;
+
+      .footer__h3 {
+        color: $main_text_color;
+        font-weight: 700;
+        cursor: pointer;
+        padding-bottom: 2.4rem;
+      }
+      div {
+        p {
+          cursor: pointer;
+          color: $tbc_logo_color;
+        }
+        p:hover {
+          color: $arrow_anchor_color;
+        }
+        p:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.6rem;
+        .contact__wrapper {
+          display: flex;
+          align-items: center;
+
+          a {
+            text-decoration: none;
+
+            display: flex;
+            span {
+              font-weight: 500;
+              margin-left: 1rem;
+              color: $tbc_logo_color;
+            }
+            span:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .social__networks {
+          margin-top: 1.6rem;
+          //   font-weight: 700;
+        }
+        .social__network {
+          flex-direction: row;
+          a {
+            text-decoration: none;
+            cursor: pointer;
+            color: $tbc_logo_color;
+            .social__net_div {
+              width: 4rem;
+              height: 4rem;
+              background-color: $social_network_icon_bg;
+
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              border-radius: 0.6rem;
+
+              &:hover {
+                svg {
+                  path {
+                    fill: $arrow_anchor_color;
+                    transition: 0.6s ease-out;
+                  }
+                }
+              }
+            }
+            .social__net_div:hover {
+              background-color: $lang_bg_hover;
+              transition: 0.6s ease-out;
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright__wrapper {
+    width: 100%;
+    border-top: 1px solid #eef1f1;
+    .copyright_content {
+      max-width: 111rem;
+      width: 100%;
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: space-between;
+
+      padding: 2.8rem 0;
+      .privacy {
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+
+        p {
+          color: $tbc_logo_color;
+          font-size: 1.2rem;
+          cursor: pointer;
+        }
+        p:hover {
+          color: $arrow_anchor_color;
+        }
+      }
+      .coryright {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
