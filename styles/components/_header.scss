@@ -7,7 +7,7 @@
     width: 100%;
     border-bottom: 0.1rem solid #eef1f1;
     height: 8rem;
-    padding: 0px 40px;
+    padding: 0 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -200,7 +200,7 @@
             }
             .burger_menu_btn {
               width: 100%;
-              height: 1px;
+              height: 0.2rem;
 
               background-color: $tbc_logo_color;
               display: block;
