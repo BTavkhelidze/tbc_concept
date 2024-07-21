@@ -31,10 +31,12 @@ for (let i = 0; i < dropDownListParents.length; i++) {
     // Hide the currently active dropdown if it's different from the clicked one
     if (currentActiveIndex !== -1 && currentActiveIndex !== i) {
       dropDownList[currentActiveIndex].classList.add('hidden');
+      dropDownListParents.classList.remove('active');
     }
 
     // Toggle the clicked dropdown
     dropDownList[i].classList.toggle('hidden');
+    dropDownListParents.classList.toggle('active');
 
     // Update the current active index
     if (!dropDownList[i].classList.contains('hidden')) {
@@ -44,3 +46,11 @@ for (let i = 0; i < dropDownListParents.length; i++) {
     }
   });
 }
+
+//! burger menu component
+
+const buger__menu = document.querySelector('.buger__menu');
+
+buger__menu.addEventListener('click', () => {
+  buger__menu.classList.toggle('open');
+});
