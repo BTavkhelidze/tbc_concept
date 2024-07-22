@@ -220,8 +220,13 @@ button {
   flex-direction: column;
   position: absolute;
   top: 100px;
+  visibility: visible;
+}
+.header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li .dropdown__list li {
+  transition: all 0.6s ease-in-out;
 }
 .header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li .dropdown__list li a {
+  transition: all 0.6s ease-in-out;
   font-size: 1.4rem;
   color: #141719;
 }
@@ -249,8 +254,8 @@ button {
   left: 50%;
   transition: 1s;
 }
-.header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li:hover::before,
-.header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li:hover::after {
+.header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li.active::before,
+.header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li.active::after {
   width: 50%;
   background-color: #182cc0; /* Example color */
 }
@@ -288,8 +293,12 @@ button {
   transition: 0.6s ease-out;
 }
 .header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper {
+  position: relative;
+}
+.header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper .desktop__lang {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   padding: 0.8rem;
   cursor: pointer;
@@ -304,6 +313,45 @@ button {
   .header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper .desktop__lang {
     display: none;
   }
+}
+.header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper .desktop__lang:hover {
+  background-color: #eef1f1;
+  border-radius: 0.4rem;
+  transition: background-color 0.25s ease-in-out;
+}
+.header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper .desktop__lang_eng {
+  position: absolute;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -53px;
+  cursor: pointer;
+  padding: 0.8rem 0;
+  width: 100%;
+  border: 1px solid #e1e4e5;
+  border-radius: 0.4rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+}
+.header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper .desktop__lang_eng span {
+  text-align: center;
+  padding: 0.4rem 0;
+  color: #555f62;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+.header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper .desktop__lang_eng span:hover {
+  background-color: #f9fafa;
+  width: 100%;
+}
+.header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper .desktop__lang:hover ~ .desktop__lang_eng,
+.header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper .desktop__lang_eng:hover {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
 }
 .header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper .buger__menu {
   width: 2rem;
@@ -358,11 +406,6 @@ button {
   width: 100%;
   transform: rotate(-45deg);
 }
-.header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper .language__wrapper:hover {
-  background-color: #eef1f1;
-  border-radius: 0.4rem;
-  transition: 0.6s ease-out;
-}
 .header__wrapper .header__dropDown {
   width: 100%;
   padding: 3.2rem 0;
@@ -382,11 +425,13 @@ button {
   max-width: 111rem;
   width: 100%;
   margin: 0 auto;
+  transition: 0.6s ease-out;
 }
 .header__wrapper .header__dropDown .header__drDown_content .dropdown__div {
   cursor: pointer;
   display: flex;
   align-items: center;
+  transition: 0.6s ease-out;
   gap: 0.6rem;
 }
 .header__wrapper .header__dropDown .header__drDown_content .dropdown__div:hover svg path {
@@ -401,6 +446,9 @@ button {
 .header__wrapper .header__dropDown .header__drDown_content span:hover {
   color: #4ca2d4;
   transition: 0.6s ease-out;
+}
+.header__wrapper .hidden {
+  display: none;
 }
 
 body .footer__wrapper {

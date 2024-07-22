@@ -18,31 +18,39 @@ const dropDownDiv = document.querySelector('.header__dropDown');
 //     dropDownList[i].classList.toggle('hidden');
 //     dropDownDiv.classList.remove('hidden');
 //   });
-//   //   dropDownListParents[i].addEventListener('activ', () => {
-//   //     console.log(dropDownList[i].active);
-//   //     dropDownList[i].classList.remove('hidden');
-//   //     dropDownDiv.classList.remove('hidden');
-//   //   });
+//   dropDownListParents[i].addEventListener('activ', () => {
+//     console.log(dropDownList[i].active);
+//     dropDownList[i].classList.remove('hidden');
+//     dropDownDiv.classList.remove('hidden');
+//   });
 // }
 let currentActiveIndex = -1;
 
 for (let i = 0; i < dropDownListParents.length; i++) {
   dropDownListParents[i].addEventListener('click', () => {
-    // Hide the currently active dropdown if it's different from the clicked one
+    // Remove 'active' class and hide dropdown from the previously active item
     if (currentActiveIndex !== -1 && currentActiveIndex !== i) {
-      dropDownList[currentActiveIndex].classList.add('hidden');
-      dropDownListParents.classList.remove('active');
+      dropDownListParents[currentActiveIndex].classList.remove('active');
+
+      dropDownListParents[currentActiveIndex]
+        .querySelector('.dropdown__list')
+        .classList.add('hidden');
     }
 
-    // Toggle the clicked dropdown
-    dropDownList[i].classList.toggle('hidden');
-    dropDownListParents.classList.toggle('active');
+    dropDownDiv.classList.remove('hidden');
+
+    // Toggle 'active' class and dropdown visibility for the clicked item
+    dropDownListParents[i].classList.toggle('active');
+    dropDownListParents[i]
+      .querySelector('.dropdown__list')
+      .classList.toggle('hidden');
 
     // Update the current active index
-    if (!dropDownList[i].classList.contains('hidden')) {
+    if (dropDownListParents[i].classList.contains('active')) {
       currentActiveIndex = i;
     } else {
       currentActiveIndex = -1;
+      dropDownDiv.classList.add('hidden');
     }
   });
 }
