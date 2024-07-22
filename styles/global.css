@@ -503,11 +503,6 @@ body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lan
     background-color: #f9fafa;
   }
 }
-@media only screen and (max-width: 480px) {
-  body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang {
-    background-color: #f9fafa;
-  }
-}
 body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang span {
   color: #555f62;
   font-size: 1.4rem;

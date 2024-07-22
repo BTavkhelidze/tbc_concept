@@ -35,9 +35,6 @@ body {
             @include responsive(tablet) {
               background-color: $social_network_icon_bg;
             }
-            @include responsive(small_phone) {
-              background-color: $social_network_icon_bg;
-            }
 
             span {
               color: $tbc_logo_color;
