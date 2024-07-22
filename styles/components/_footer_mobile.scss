@@ -10,8 +10,8 @@ body {
       max-width: 111rem;
       width: 100%;
       margin: 0 auto;
-
-      padding-bottom: 4.5rem;
+      //   padding-top: 3.6rem;
+      padding-bottom: 3.6rem;
 
       .tbc_logo {
         display: flex;
@@ -27,11 +27,74 @@ body {
           cursor: pointer;
         }
         .language__wrapper {
-          display: flex;
-          align-items: center;
-          gap: 0.6rem;
+          position: relative;
 
-          padding: 0.8rem;
+          .desktop__lang {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 0.8rem;
+
+            cursor: pointer;
+
+            background-color: $social_network_icon_bg;
+
+            span {
+              color: $tbc_logo_color;
+              font-size: 1.4rem;
+              font-weight: 700;
+              line-height: 1.7;
+            }
+          }
+
+          .desktop__lang:hover {
+            background-color: $lang_bg_hover;
+            border-radius: 0.4rem;
+            transition: background-color 0.25s ease-in-out;
+          }
+
+          .desktop__lang_eng {
+            position: absolute;
+            background-color: $white_color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: -53px;
+            cursor: pointer;
+
+            padding: 0.8rem 0;
+
+            width: 100%;
+
+            border: 1px solid #e1e4e5;
+            border-radius: 0.4rem;
+
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+            span {
+              // background-color: black;
+              text-align: center;
+              padding: 0.4rem 0;
+              color: $tbc_logo_color;
+              font-size: 1.4rem;
+              font-weight: 700;
+              line-height: 1.7;
+            }
+            span:hover {
+              background-color: $body_color;
+              width: 100%;
+            }
+          }
+
+          // Show .desktop__lang_eng when either .desktop__lang or .desktop__lang_eng is hovered
+          .desktop__lang:hover ~ .desktop__lang_eng,
+          .desktop__lang_eng:hover {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+          }
 
           cursor: pointer;
           span {
@@ -40,11 +103,6 @@ body {
             font-weight: 700;
             line-height: 1.7;
           }
-        }
-        .language__wrapper:hover {
-          background-color: $lang_bg_hover;
-          border-radius: 0.4rem;
-          transition: 0.6s ease-out;
         }
       }
       .footer__mob_burger_wrapper {
@@ -228,6 +286,7 @@ body {
             align-items: center;
             gap: 3rem;
 
+            flex-wrap: wrap;
             p {
               color: $tbc_logo_color;
               font-size: 1.4rem;

@@ -156,6 +156,11 @@ button {
   width: 100%;
   background-color: #ffffff;
 }
+@media only screen and (max-width: 480px) {
+  .header__wrapper {
+    overflow-x: hidden;
+  }
+}
 .header__wrapper .header__content__wrapper {
   width: 100%;
   border-bottom: 0.1rem solid #eef1f1;
@@ -264,6 +269,11 @@ button {
   gap: 1.6rem;
   align-items: center;
 }
+@media only screen and (max-width: 480px) {
+  .header__wrapper .header__content__wrapper .header__content .header__btns_wrapper {
+    gap: 0.8rem;
+  }
+}
 .header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .search_icon__wrapper {
   cursor: pointer;
   padding: 0.8rem;
@@ -286,7 +296,7 @@ button {
   color: #182cc0;
   font-weight: 700;
   font-size: 1.4rem;
-  line-height: 0.14rem;
+  line-height: 1.9rem;
 }
 .header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .subscribe__btn p:hover {
   color: #4ca2d4;
@@ -470,28 +480,84 @@ body .footer__wrapper .footer_content {
 body .footer__wrapper .footer_content .tbc_logo {
   display: flex;
   justify-content: space-between;
+  padding-top: 4.5rem;
   padding-bottom: 5rem;
 }
 body .footer__wrapper .footer_content .tbc_logo div {
   cursor: pointer;
 }
 body .footer__wrapper .footer_content .tbc_logo .language__wrapper {
+  position: relative;
+  cursor: pointer;
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   padding: 0.8rem;
   cursor: pointer;
+}
+@media only screen and (max-width: 1070px) {
+  body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang {
+    background-color: #f9fafa;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang {
+    background-color: #f9fafa;
+  }
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang span {
+  color: #555f62;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang:hover {
+  background-color: #eef1f1;
+  border-radius: 0.4rem;
+  transition: background-color 0.25s ease-in-out;
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang_eng {
+  position: absolute;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -53px;
+  cursor: pointer;
+  padding: 0.8rem 0;
+  width: 100%;
+  border: 1px solid #e1e4e5;
+  border-radius: 0.4rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang_eng span {
+  text-align: center;
+  padding: 0.4rem 0;
+  color: #555f62;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang_eng span:hover {
+  background-color: #f9fafa;
+  width: 100%;
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang:hover ~ .desktop__lang_eng,
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang_eng:hover {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
 }
 body .footer__wrapper .footer_content .tbc_logo .language__wrapper span {
   color: #555f62;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.7;
-}
-body .footer__wrapper .footer_content .tbc_logo .language__wrapper:hover {
-  background-color: #eef1f1;
-  border-radius: 0.4rem;
-  transition: 0.6s ease-out;
 }
 body .footer__wrapper .footer_content .footer__description {
   display: flex;
@@ -700,7 +766,7 @@ body .footer-mobile_wrapper .footer-mobile_content {
   max-width: 111rem;
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 4.5rem;
+  padding-bottom: 3.6rem;
 }
 body .footer-mobile_wrapper .footer-mobile_content .tbc_logo {
   display: flex;
@@ -717,22 +783,68 @@ body .footer-mobile_wrapper .footer-mobile_content .tbc_logo div {
   cursor: pointer;
 }
 body .footer-mobile_wrapper .footer-mobile_content .tbc_logo .language__wrapper {
+  position: relative;
+  cursor: pointer;
+}
+body .footer-mobile_wrapper .footer-mobile_content .tbc_logo .language__wrapper .desktop__lang {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   padding: 0.8rem;
   cursor: pointer;
+  background-color: #f9fafa;
+}
+body .footer-mobile_wrapper .footer-mobile_content .tbc_logo .language__wrapper .desktop__lang span {
+  color: #555f62;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+body .footer-mobile_wrapper .footer-mobile_content .tbc_logo .language__wrapper .desktop__lang:hover {
+  background-color: #eef1f1;
+  border-radius: 0.4rem;
+  transition: background-color 0.25s ease-in-out;
+}
+body .footer-mobile_wrapper .footer-mobile_content .tbc_logo .language__wrapper .desktop__lang_eng {
+  position: absolute;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -53px;
+  cursor: pointer;
+  padding: 0.8rem 0;
+  width: 100%;
+  border: 1px solid #e1e4e5;
+  border-radius: 0.4rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+}
+body .footer-mobile_wrapper .footer-mobile_content .tbc_logo .language__wrapper .desktop__lang_eng span {
+  text-align: center;
+  padding: 0.4rem 0;
+  color: #555f62;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+body .footer-mobile_wrapper .footer-mobile_content .tbc_logo .language__wrapper .desktop__lang_eng span:hover {
+  background-color: #f9fafa;
+  width: 100%;
+}
+body .footer-mobile_wrapper .footer-mobile_content .tbc_logo .language__wrapper .desktop__lang:hover ~ .desktop__lang_eng,
+body .footer-mobile_wrapper .footer-mobile_content .tbc_logo .language__wrapper .desktop__lang_eng:hover {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
 }
 body .footer-mobile_wrapper .footer-mobile_content .tbc_logo .language__wrapper span {
   color: #555f62;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.7;
-}
-body .footer-mobile_wrapper .footer-mobile_content .tbc_logo .language__wrapper:hover {
-  background-color: #eef1f1;
-  border-radius: 0.4rem;
-  transition: 0.6s ease-out;
 }
 body .footer-mobile_wrapper .footer-mobile_content .footer__mob_burger_wrapper {
   width: 100%;
@@ -894,6 +1006,7 @@ body .footer-mobile_wrapper .footer-mobile_content .copyright__wrapper .copyrigh
   display: flex;
   align-items: center;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 body .footer-mobile_wrapper .footer-mobile_content .copyright__wrapper .copyright_content .privacy p {
   color: #555f62;
