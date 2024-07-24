@@ -238,11 +238,7 @@ button {
   opacity: 0;
   transition: none;
 }
-.header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li .dropdown__list li {
-  transition: all 0.6s ease-in-out;
-}
 .header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li .dropdown__list li a {
-  transition: all 0.6s ease-in-out;
   font-size: 1.4rem;
   color: #141719;
 }
@@ -489,6 +485,8 @@ button {
   border-top: 1px solid #d1d5d6;
   width: 100%;
   padding: 3.6rem 4rem;
+  transition-property: height;
+  transition-duration: 1000ms;
 }
 @media only screen and (max-width: 480px) {
   .header__wrapper .header__burger__menu__wrapper .burger__menu__content .br_menu_title {
@@ -690,6 +688,7 @@ button {
   width: 100%;
   min-height: 36rem;
   background-image: url("../../assets/webp/concept_banner.webp");
+  background-repeat: no-repeat;
   overflow: hidden;
   border-radius: 0.8rem;
   padding: 8rem;
@@ -746,6 +745,82 @@ button {
   font-weight: 500;
   line-height: 1.5;
   color: #141719;
+}
+.mainContainer .select__Package__wrapper {
+  max-width: 111rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+.mainContainer .select__Package__wrapper div p {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #141719;
+}
+.mainContainer .select__Package__wrapper .selectPack_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 3rem;
+  overflow: hidden;
+}
+.mainContainer .select__Package__wrapper .selectPack_grid .digital_wrapper {
+  width: 100%;
+  height: 25.6rem;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.mainContainer .select__Package__wrapper .selectPack_grid .digital_wrapper .digital_img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/webp/digital.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.25s ease-in-out;
+}
+.mainContainer .select__Package__wrapper .selectPack_grid .digital_wrapper .digital_img:hover {
+  transform: scale(1.05);
+}
+.mainContainer .select__Package__wrapper .selectPack_grid .premium_wrapper {
+  max-width: 54rem;
+  width: 100%;
+  height: 25.6rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  grid-row: 2;
+}
+.mainContainer .select__Package__wrapper .selectPack_grid .premium_wrapper .premium_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-image: url("../../assets/webp/premium.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.25s ease-in-out;
+}
+.mainContainer .select__Package__wrapper .selectPack_grid .premium_wrapper .premium_img:hover {
+  transform: scale(1.05);
+}
+.mainContainer .select__Package__wrapper .selectPack_grid .circle_360_wrapper {
+  width: 100%;
+  grid-row: 1/-1;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.mainContainer .select__Package__wrapper .selectPack_grid .circle_360_wrapper .circle_360_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-image: url("../../assets/webp/360part.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.25s ease-in-out;
+}
+.mainContainer .select__Package__wrapper .selectPack_grid .circle_360_wrapper .circle_360_img:hover {
+  transform: scale(1.05);
 }
 
 body .footer__wrapper {

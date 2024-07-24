@@ -20,6 +20,7 @@
       width: 100%;
       min-height: 36rem;
       background-image: url('../../assets/webp/concept_banner.webp');
+      background-repeat: no-repeat;
       overflow: hidden;
       border-radius: 0.8rem;
       padding: 8rem;
@@ -82,6 +83,98 @@
       font-weight: 500;
       line-height: 1.5;
       color: $dropDown_li_color;
+    }
+  }
+  .select__Package__wrapper {
+    @include container;
+    padding: 6rem 0;
+
+    div {
+      p {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $main_text_color;
+      }
+    }
+    .selectPack_grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      grid-gap: 3rem;
+      overflow: hidden;
+      .digital_wrapper {
+        width: 100%;
+        height: 25.6rem;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 1rem;
+
+        .digital_img {
+          width: 100%;
+          height: 100%;
+          background-image: url('../../assets/webp/digital.webp');
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          transition: transform 0.25s ease-in-out; // Smooth transition for transform
+
+          &:hover {
+            transform: scale(
+              1.05
+            ); // Scale element to 105% of its original size
+          }
+        }
+      }
+      .premium_wrapper {
+        max-width: 54rem;
+        width: 100%;
+        height: 25.6rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        grid-row: 2;
+
+        .premium_img {
+          width: 100%;
+          height: 100%;
+          border-radius: 1rem;
+          background-image: url('../../assets/webp/premium.webp');
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          transition: transform 0.25s ease-in-out; // Smooth transition for transform
+
+          &:hover {
+            transform: scale(
+              1.05
+            ); // Scale element to 105% of its original size
+          }
+        }
+      }
+      .circle_360_wrapper {
+        width: 100%;
+        grid-row: 1 / -1;
+        height: 100%;
+        border-radius: 1rem;
+        overflow: hidden;
+        .circle_360_img {
+          width: 100%;
+          height: 100%;
+          border-radius: 1rem;
+          background-image: url('../../assets/webp/360part.webp');
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          transition: transform 0.25s ease-in-out; // Smooth transition for transform
+
+          &:hover {
+            transform: scale(
+              1.05
+            ); // Scale element to 105% of its original size
+          }
+        }
+      }
     }
   }
 }

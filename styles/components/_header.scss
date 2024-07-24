@@ -70,10 +70,10 @@
               transition: none;
 
               li {
-                transition: all 0.6s ease-in-out;
+                // transition: all 0.6s ease-in-out;
 
                 a {
-                  transition: all 0.6s ease-in-out;
+                  // transition: all 0.6s ease-in-out;
                   font-size: 1.4rem;
                   color: $dropDown_li_color;
                 }
@@ -375,6 +375,8 @@
         border-top: 1px solid $footer_burgerMenu_border_color;
         width: 100%;
         padding: 3.6rem 4rem;
+        transition-property: height;
+        transition-duration: 1000ms;
 
         @include responsive(small_phone) {
           padding: 3.6rem 1.5rem;
