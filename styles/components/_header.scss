@@ -19,10 +19,8 @@
     }
 
     .header__content {
-      width: 100%;
+      @include container;
       z-index: 11;
-      max-width: 111rem;
-      margin: 0 auto;
       display: flex;
       align-items: center;
       gap: 3.2rem;
@@ -84,10 +82,9 @@
                   color: $arrow_anchor_color;
                 }
               }
-            }
-
-            &.hidden {
-              display: none;
+              &.hidden {
+                display: none;
+              }
             }
           }
         }
@@ -365,14 +362,10 @@
     width: 100%;
     height: 100vh;
     display: none;
-    // visibility: hidden;
-    // position: absolute;
-    // left: -110%;
-    // top: 0;
+
     @include responsive(l-tablet) {
       visibility: hidden;
     }
-    // transition: all 0.3s ease-out;'
 
     .burger__menu__content {
       .br_menu_title {
@@ -532,21 +525,16 @@
       width: 100%;
       border-top: 1px solid #eef1f1;
       background-color: $body_color;
-      .copyright_content {
-        max-width: 111rem;
-        width: 100%;
-        margin: 0 auto;
 
+      .copyright_content {
+        @include container;
         display: flex;
         flex-direction: column;
-
         gap: 3.2rem;
-
         padding: 3.2rem 4rem;
 
         @include responsive(small_phone) {
           padding: 2.4rem 1.5rem;
-
           gap: 2.4rem;
         }
 
@@ -554,21 +542,23 @@
           display: flex;
           align-items: center;
           gap: 3rem;
-
           flex-wrap: wrap;
+
           p {
             color: $tbc_logo_color;
             font-size: 1.4rem;
             cursor: pointer;
-          }
-          p:hover {
-            color: $arrow_anchor_color;
+            &:hover {
+              color: $arrow_anchor_color;
+            }
           }
         }
+
         .coryright {
           display: flex;
           align-items: center;
           gap: 0.8rem;
+
           p {
             font-size: 1.4rem;
             color: $tbc_logo_color;

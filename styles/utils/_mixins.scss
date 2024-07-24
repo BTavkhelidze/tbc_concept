@@ -9,6 +9,12 @@
   }
 }
 
+@mixin container {
+  max-width: 111rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
 $l-pc: 1420px; // large PC screen size
 $pc: 1200px; // PC screen size.
 $l-tablet: 990px; // tablet screen size

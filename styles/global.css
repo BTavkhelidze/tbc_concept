@@ -186,10 +186,10 @@ button {
   }
 }
 .header__wrapper .header__content__wrapper .header__content {
-  width: 100%;
-  z-index: 11;
   max-width: 111rem;
+  width: 100%;
   margin: 0 auto;
+  z-index: 11;
   display: flex;
   align-items: center;
   gap: 3.2rem;
@@ -249,7 +249,7 @@ button {
 .header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li .dropdown__list li a:hover {
   color: #182cc0;
 }
-.header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li.hidden {
+.header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li .dropdown__list.hidden {
   display: none;
 }
 .header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li::before,
@@ -666,6 +666,86 @@ button {
 }
 .header__wrapper .hidden {
   display: none;
+}
+
+.mainContainer {
+  width: 100%;
+}
+.mainContainer .tbc__concept {
+  max-width: 111rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+.mainContainer .tbc__concept .page__home {
+  padding: 2.4rem 0 5.6rem 0;
+}
+.mainContainer .tbc__concept .page__home h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 0.17rem;
+  color: #555f62;
+}
+.mainContainer .tbc__concept .tbcc__img__wrapper {
+  width: 100%;
+  min-height: 36rem;
+  background-image: url("../../assets/webp/concept_banner.webp");
+  overflow: hidden;
+  border-radius: 0.8rem;
+  padding: 8rem;
+  background-size: 105%;
+}
+.mainContainer .tbc__concept .tbcc__img__wrapper .tbcc__img__content {
+  max-width: 45rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+}
+.mainContainer .tbc__concept .tbcc__img__wrapper .tbcc__img__content h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.mainContainer .tbc__concept .tbcc__img__wrapper .tbcc__img__content p {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.mainContainer .tbc__concept .tbcc__img__wrapper .tbcc__img__content button {
+  border: none;
+  border-radius: 0.4rem;
+  background-image: linear-gradient(15deg, #001682, #3240e5);
+  align-self: flex-start;
+}
+.mainContainer .tbc__concept .tbcc__img__wrapper .tbcc__img__content button a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem 2.4rem;
+  gap: 1rem;
+  color: #ffffff;
+  border-radius: 0.4rem;
+}
+.mainContainer .tbc__concept .tbcc__img__wrapper .tbcc__img__content button a:hover {
+  background-color: #3295ce;
+  transition: background-color 0.25s ease-in-out;
+}
+.mainContainer .tbc__concept .tbcc__img__wrapper .tbcc__img__content button p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.mainContainer .page_message_wrapper {
+  max-width: 111rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+.mainContainer .page_message_wrapper p {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #141719;
 }
 
 body .footer__wrapper {

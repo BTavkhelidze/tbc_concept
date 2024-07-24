@@ -8,9 +8,7 @@ body {
     }
 
     .footer_content {
-      max-width: 111rem;
-      width: 100%;
-      margin: 0 auto;
+      @include container;
       padding-bottom: 4.5rem;
 
       .tbc_logo {
@@ -194,15 +192,13 @@ body {
     .copyright__wrapper {
       width: 100%;
       border-top: 1px solid #eef1f1;
-      .copyright_content {
-        max-width: 111rem;
-        width: 100%;
-        margin: 0 auto;
 
+      .copyright_content {
+        @include container;
         display: flex;
         justify-content: space-between;
-
         padding: 2.8rem 0;
+
         .privacy {
           display: flex;
           align-items: center;
@@ -212,16 +208,17 @@ body {
             color: $tbc_logo_color;
             font-size: 1.2rem;
             cursor: pointer;
-
             &:hover {
               color: $arrow_anchor_color;
             }
           }
         }
+
         .copyright {
           display: flex;
           align-items: center;
           gap: 0.8rem;
+
           p {
             font-size: 1.2rem;
             color: $tbc_logo_color;
