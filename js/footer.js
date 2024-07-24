@@ -5,10 +5,6 @@ const hidden_menu = document.querySelectorAll('.hidden_menu');
 
 const icon = document.querySelector('.closed');
 
-// br_menu_title.addEventListener('click', () => {
-//   hidden_menu.classList.toggle('hidden');
-// });
-
 let currentIcon = './assets/svg/burger_menu_arrow_down.svg';
 let openMenuIndex = -1;
 
@@ -38,13 +34,18 @@ for (let i = 0; i < br_menu_title.length; i++) {
 
 // fixed burger menu buttom/right
 
-const fixed__btn = document.querySelector('.fixed__btn');
-const fixed_menu = document.querySelector('.fixed_menu');
+const fixedBtn = document.querySelector('.fixed__btn');
+const hiddenDivs = document.querySelector('.hidden_divs');
 
 const hidden_divs = document.querySelector('.hidden_divs');
 
-fixed__btn.addEventListener('click', () => {
-  fixed__btn.classList.toggle('open__fixed__menu');
-  hidden_divs.classList.toggle('hidden');
-  console.log('fixed__btn__wrapper');
-});
+// Check if the elements exist before adding event listeners
+if (fixedBtn && hiddenDivs) {
+  fixedBtn.addEventListener('click', () => {
+    fixedBtn.classList.toggle('open__fixed__menu');
+    hiddenDivs.classList.toggle('hidden');
+    console.log('fixed__btn__wrapper');
+  });
+} else {
+  console.error('Required elements are missing.');
+}

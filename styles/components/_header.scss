@@ -5,7 +5,6 @@
   @include responsive(small_phone) {
     overflow-x: hidden;
   }
-
   .header__content__wrapper {
     width: 100%;
     border-bottom: 0.1rem solid #eef1f1;
@@ -20,17 +19,14 @@
     }
 
     .header__content {
+      width: 100%;
       z-index: 11;
       max-width: 111rem;
-      width: 100%;
-
       margin: 0 auto;
-
       display: flex;
       align-items: center;
-      // justify-content: space-between;
-
       gap: 3.2rem;
+
       .tbcLogo_web {
         cursor: pointer;
 
@@ -41,12 +37,13 @@
 
       .tbcLogo_mob {
         cursor: pointer;
-
         display: none;
+
         @include responsive(phone) {
           display: inline-block;
         }
       }
+
       .header__nav {
         flex: 1;
 
@@ -54,129 +51,129 @@
           display: flex;
           gap: 3.2rem;
 
-          // tablet responcive
-
           @include responsive(l-tablet) {
             display: none;
           }
 
           .parent__li {
             position: relative;
+
             a {
               color: $header_grey_color;
               font-size: 1.6rem;
             }
+
             .dropdown__list {
-              display: flex;
-              flex-direction: column;
               position: absolute;
               top: 100px;
-
-              visibility: visible;
+              display: flex;
+              flex-direction: column;
+              opacity: 0;
+              transition: none;
 
               li {
                 transition: all 0.6s ease-in-out;
+
                 a {
                   transition: all 0.6s ease-in-out;
                   font-size: 1.4rem;
                   color: $dropDown_li_color;
                 }
+
                 a:hover {
                   color: $arrow_anchor_color;
                 }
               }
             }
-            .hidden {
+
+            &.hidden {
               display: none;
             }
           }
         }
-        ul .parent__li::before {
-          content: '';
-          position: absolute;
-          width: 0;
-          height: 2px;
 
-          bottom: -32px;
-          right: 50%;
-
-          transition: 1s;
-        }
-
+        ul .parent__li::before,
         ul .parent__li::after {
           content: '';
           position: absolute;
           width: 0;
           height: 2px;
-
           bottom: -32px;
-          left: 50%;
-
           transition: 1s;
         }
+
+        ul .parent__li::before {
+          right: 50%;
+        }
+
+        ul .parent__li::after {
+          left: 50%;
+        }
+
         ul .parent__li.active::before,
         ul .parent__li.active::after {
           width: 50%;
-          background-color: $arrow_anchor_color; /* Example color */
+          background-color: $arrow_anchor_color;
+        }
+
+        .parent__li.active .dropdown__list {
+          animation: dropdownAnimation 0.2s forwards;
+          animation-delay: 0.6s;
         }
       }
+
       .header__btns_wrapper {
         display: flex;
-
         gap: 1.6rem;
         align-items: center;
 
         @include responsive(small_phone) {
           gap: 0.8rem;
         }
+
         .search_icon__wrapper {
           cursor: pointer;
           padding: 0.8rem;
+
           &:hover {
-            svg {
-              path {
-                fill: $arrow_anchor_color_hover;
-                transition: 0.6s ease-out;
-              }
+            svg path {
+              fill: $arrow_anchor_color_hover;
+              transition: 0.6s ease-out;
             }
           }
         }
+
         .subscribe__btn {
           display: flex;
-
           align-items: center;
-
           gap: 0.6rem;
           cursor: pointer;
-          &:hover {
-            svg {
-              path {
-                fill: $arrow_anchor_color_hover;
-                transition: 0.6s ease-out;
-              }
-            }
-          }
-          svg {
-            path {
-            }
-          }
-          p {
-            color: $arrow_anchor_color;
 
+          &:hover {
+            svg path {
+              fill: $arrow_anchor_color_hover;
+              transition: 0.6s ease-out;
+            }
+          }
+
+          p {
             font-weight: 700;
             font-size: 1.4rem;
-
             line-height: 1.9rem;
+            color: $arrow_anchor_color;
+
             @include responsive($s-phone) {
               font-size: 1.2rem;
               line-height: 1.6rem;
             }
-          }
-          p:hover {
-            color: $arrow_anchor_color_hover;
-            transition: 0.6s ease-out;
+
+            &:hover {
+              color: $arrow_anchor_color_hover;
+              transition: 0.6s ease-out;
+            }
           }
         }
+
         .language__wrapper {
           position: relative;
 
@@ -186,7 +183,6 @@
             justify-content: center;
             gap: 0.6rem;
             padding: 0.8rem;
-
             cursor: pointer;
 
             span {
@@ -199,12 +195,12 @@
             @include responsive(l-tablet) {
               display: none;
             }
-          }
 
-          .desktop__lang:hover {
-            background-color: $lang_bg_hover;
-            border-radius: 0.4rem;
-            transition: background-color 0.25s ease-in-out;
+            &:hover {
+              background-color: $lang_bg_hover;
+              border-radius: 0.4rem;
+              transition: background-color 0.25s ease-in-out;
+            }
           }
 
           .desktop__lang_eng {
@@ -215,33 +211,29 @@
             justify-content: center;
             bottom: -53px;
             cursor: pointer;
-
             padding: 0.8rem 0;
-
             width: 100%;
-
             border: 1px solid #e1e4e5;
             border-radius: 0.4rem;
-
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+
             span {
-              // background-color: black;
               text-align: center;
               padding: 0.4rem 0;
               color: $tbc_logo_color;
               font-size: 1.4rem;
               font-weight: 700;
               line-height: 1.7;
-            }
-            span:hover {
-              background-color: $body_color;
-              width: 100%;
+
+              &:hover {
+                background-color: $body_color;
+                width: 100%;
+              }
             }
           }
 
-          // Show .desktop__lang_eng when either .desktop__lang or .desktop__lang_eng is hovered
           .desktop__lang:hover ~ .desktop__lang_eng,
           .desktop__lang_eng:hover {
             opacity: 1;
@@ -249,18 +241,12 @@
             transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
           }
 
-          // burger menu tablet/mobile
-
           .buger__menu {
             width: 2rem;
             height: 1.8rem;
-
             display: none;
-
             cursor: pointer;
-
             position: relative;
-
             transition: all 0.6s ease-in-out;
 
             @include responsive(l-tablet) {
@@ -268,51 +254,48 @@
               align-items: center;
               justify-content: center;
             }
+
             .burger_menu_btn {
               width: 100%;
               height: 0.2rem;
-
               background-color: $tbc_logo_color;
               display: block;
-
               transition: all 0.6s ease-in-out;
-
               border-radius: 0.1rem;
-            }
-            .burger_menu_btn:before,
-            .burger_menu_btn:after {
-              content: '';
 
-              border-radius: 0.1rem;
-              position: absolute;
-              height: 0.2rem;
-              background-color: $tbc_logo_color;
+              &:before,
+              &:after {
+                content: '';
+                border-radius: 0.1rem;
+                position: absolute;
+                height: 0.2rem;
+                background-color: $tbc_logo_color;
+                transition: all 0.6s ease-in-out;
+              }
 
-              transition: all 0.6s ease-in-out;
-            }
-            .burger_menu_btn:before {
-              width: 40%;
-              transform: translateY(-6px);
-            }
-            .burger_menu_btn:after {
-              width: 80%;
-              transform: translateY(6px);
+              &:before {
+                width: 40%;
+                transform: translateY(-6px);
+              }
+
+              &:after {
+                width: 80%;
+                transform: translateY(6px);
+              }
             }
           }
 
-          .open {
-            .burger_menu_btn {
-              transform: rotate(90deg);
-              background-color: transparent;
-              transition: all 0.6s ease-in-out;
-            }
+          .open .burger_menu_btn {
+            transform: rotate(90deg);
+            background-color: transparent;
+            transition: all 0.6s ease-in-out;
 
-            .burger_menu_btn::before {
+            &:before {
               width: 100%;
               transform: rotate(45deg);
             }
 
-            .burger_menu_btn::after {
+            &:after {
               width: 100%;
               transform: rotate(-45deg);
             }
@@ -321,17 +304,18 @@
       }
     }
   }
+
   .header__dropDown {
     width: 100%;
-    padding: 3.2rem 0;
     height: 24rem;
-
+    padding: 3.2rem 0;
     z-index: 10;
     padding: 20px 40px;
     background-color: $white_color;
-
     display: flex;
     align-items: flex-end;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
     @include responsive(l-tablet) {
       display: none;
     }
@@ -339,9 +323,9 @@
     .header__drDown_content {
       max-width: 111rem;
       width: 100%;
-
       margin: 0 auto;
       transition: 0.6s ease-out;
+
       .dropdown__div {
         cursor: pointer;
         display: flex;
@@ -358,19 +342,252 @@
           }
         }
       }
+
       span {
         color: $arrow_anchor_color;
         font-size: 1.4rem;
         font-weight: 700;
+
+        &:hover {
+          color: $arrow_anchor_color_hover;
+          transition: 0.6s ease-out;
+        }
+      }
+    }
+
+    // Add animation to dropdown when active
+    &.active {
+      animation: dropdownAnimation 0.6s ease-out forwards;
+    }
+  }
+
+  .header__burger__menu__wrapper {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    // visibility: hidden;
+    // position: absolute;
+    // left: -110%;
+    // top: 0;
+    @include responsive(l-tablet) {
+      visibility: hidden;
+    }
+    // transition: all 0.3s ease-out;'
+
+    .burger__menu__content {
+      .br_menu_title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid $footer_burgerMenu_border_color;
+        width: 100%;
+        padding: 3.6rem 4rem;
+
+        @include responsive(small_phone) {
+          padding: 3.6rem 1.5rem;
+        }
+
+        .bmenu__h3 {
+          font-weight: 700;
+          line-height: 3.6rem;
+          font-size: 2.4rem;
+          cursor: pointer;
+
+          a {
+            color: $dropDown_li_color;
+          }
+
+          @include responsive(small_phone) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+          }
+        }
       }
 
-      span:hover {
-        color: $arrow_anchor_color_hover;
-        transition: 0.6s ease-out;
+      .hidden_menu {
+        padding: 0 4rem 3.6rem 4rem;
+
+        p {
+          a {
+            color: $tbc_logo_color;
+            cursor: pointer;
+            font-size: 1.4rem;
+            line-height: 2.27rem;
+            &:hover {
+              color: $arrow_anchor_color;
+            }
+          }
+        }
+
+        p:not(:last-child) {
+          margin-bottom: 2.4rem;
+        }
+
+        @include responsive(small_phone) {
+          padding: 0 1.5rem 2.4rem 1.5rem;
+        }
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .contactUs {
+        padding: 5.6rem 4rem 3.2rem 4rem;
+
+        @include responsive(small_phone) {
+          padding: 3.2rem 1.5rem 3.2rem 1.5rem;
+        }
+      }
+
+      .contact__wrapper {
+        display: flex;
+        align-items: center;
+        padding: 0 4rem;
+        padding-bottom: 3.2rem;
+
+        @include responsive(small_phone) {
+          padding: 0 1.5rem;
+          padding-bottom: 3.2rem;
+        }
+
+        a {
+          text-decoration: none;
+          display: flex;
+
+          span {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-left: 1rem;
+            color: $tbc_logo_color;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .social__networks {
+        font-weight: 700;
+        line-height: 3.6rem;
+        font-size: 2.4rem;
+        padding: 0 4rem 2.4rem 4rem;
+        cursor: pointer;
+
+        @include responsive(small_phone) {
+          padding: 0 1.5rem 2.4rem 1.5rem;
+          font-size: 1.6rem;
+        }
+
+        a {
+          color: $dropDown_li_color;
+        }
+      }
+
+      .social__network {
+        display: flex;
+        gap: 1.5rem;
+        padding: 0 4rem;
+        padding-bottom: 5.6rem;
+
+        @include responsive(small_phone) {
+          padding: 0 1.5rem;
+          padding-bottom: 3.2rem;
+        }
+
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          color: $tbc_logo_color;
+
+          .social__net_div {
+            width: 4rem;
+            height: 4rem;
+            background-color: $social_network_icon_bg;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.6rem;
+
+            &:hover {
+              svg {
+                path {
+                  fill: $arrow_anchor_color;
+                  transition: 0.6s ease-out;
+                }
+              }
+            }
+
+            &:hover {
+              background-color: $lang_bg_hover;
+              transition: 0.6s ease-out;
+            }
+          }
+        }
+      }
+    }
+
+    .copyright__wrapper {
+      width: 100%;
+      border-top: 1px solid #eef1f1;
+      background-color: $body_color;
+      .copyright_content {
+        max-width: 111rem;
+        width: 100%;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 3.2rem;
+
+        padding: 3.2rem 4rem;
+
+        @include responsive(small_phone) {
+          padding: 2.4rem 1.5rem;
+
+          gap: 2.4rem;
+        }
+
+        .privacy {
+          display: flex;
+          align-items: center;
+          gap: 3rem;
+
+          flex-wrap: wrap;
+          p {
+            color: $tbc_logo_color;
+            font-size: 1.4rem;
+            cursor: pointer;
+          }
+          p:hover {
+            color: $arrow_anchor_color;
+          }
+        }
+        .coryright {
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+          p {
+            font-size: 1.4rem;
+            color: $tbc_logo_color;
+          }
+        }
       }
     }
   }
+
+  .header__burger__menu__wrapper.active {
+    visibility: visible;
+    display: block;
+    transition: all 0.6s ease-out;
+  }
+
   .hidden {
     display: none;
   }
 }
+// body.noScroll {
+//   overflow: hidden;
+// }

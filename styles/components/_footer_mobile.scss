@@ -6,26 +6,27 @@ body {
       width: 100%;
       background-color: $white_color;
     }
+
     .footer-mobile_content {
       max-width: 111rem;
       width: 100%;
       margin: 0 auto;
-      //   padding-top: 3.6rem;
       padding-bottom: 3.6rem;
 
       .tbc_logo {
         display: flex;
         justify-content: space-between;
         width: 100%;
-
         padding: 3.6rem 4rem;
 
         @include responsive(small_phone) {
           padding: 3.2rem 1.5rem;
         }
+
         div {
           cursor: pointer;
         }
+
         .language__wrapper {
           position: relative;
 
@@ -35,9 +36,7 @@ body {
             justify-content: center;
             gap: 0.6rem;
             padding: 0.8rem;
-
             cursor: pointer;
-
             background-color: $social_network_icon_bg;
 
             span {
@@ -62,29 +61,26 @@ body {
             justify-content: center;
             bottom: -53px;
             cursor: pointer;
-
             padding: 0.8rem 0;
-
             width: 100%;
-
             border: 1px solid #e1e4e5;
             border-radius: 0.4rem;
-
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+
             span {
-              // background-color: black;
               text-align: center;
               padding: 0.4rem 0;
               color: $tbc_logo_color;
               font-size: 1.4rem;
               font-weight: 700;
               line-height: 1.7;
-            }
-            span:hover {
-              background-color: $body_color;
-              width: 100%;
+
+              &:hover {
+                background-color: $body_color;
+                width: 100%;
+              }
             }
           }
 
@@ -97,6 +93,7 @@ body {
           }
 
           cursor: pointer;
+
           span {
             color: $tbc_logo_color;
             font-size: 1.4rem;
@@ -105,37 +102,37 @@ body {
           }
         }
       }
+
       .footer__mob_burger_wrapper {
         width: 100%;
         display: flex;
         flex-direction: column;
+
         .footer__mob_burger_content {
           .br_menu_title {
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             border-top: 1px solid $footer_burgerMenu_border_color;
             width: 100%;
+            padding: 3.6rem 4rem;
 
             @include responsive(small_phone) {
               padding: 3.6rem 1.5rem;
             }
-            padding: 3.6rem 4rem;
 
             .footer__h3 {
               font-weight: 700;
               line-height: 3.6rem;
-
               font-size: 2.4rem;
-
               cursor: pointer;
+
               a {
                 color: $dropDown_li_color;
               }
+
               @include responsive(small_phone) {
                 font-size: 1.6rem;
-
                 line-height: 2.4rem;
               }
             }
@@ -143,6 +140,7 @@ body {
 
           .hidden_menu {
             padding: 0 4rem 3.6rem 4rem;
+
             p {
               a {
                 color: $tbc_logo_color;
@@ -160,20 +158,22 @@ body {
               padding: 0 1.5rem 2.4rem 1.5rem;
             }
           }
+
           .hidden {
             display: none;
           }
+
           .contactUs {
+            padding: 5.6rem 4rem 3.2rem 4rem;
+
             @include responsive(small_phone) {
               padding: 3.2rem 1.5rem 3.2rem 1.5rem;
             }
-
-            padding: 5.6rem 4rem 3.2rem 4rem;
           }
+
           .contact__wrapper {
             display: flex;
             align-items: center;
-
             padding: 0 4rem;
             padding-bottom: 3.2rem;
 
@@ -184,62 +184,61 @@ body {
 
             a {
               text-decoration: none;
-
               display: flex;
+
               span {
                 font-size: 1.4rem;
-
                 font-weight: 500;
                 margin-left: 1rem;
                 color: $tbc_logo_color;
-              }
-              span:hover {
-                text-decoration: underline;
+
+                &:hover {
+                  text-decoration: underline;
+                }
               }
             }
           }
+
           .social__networks {
             font-weight: 700;
             line-height: 3.6rem;
-
             font-size: 2.4rem;
             padding: 0 4rem 2.4rem 4rem;
+            cursor: pointer;
 
             @include responsive(small_phone) {
               padding: 0 1.5rem 2.4rem 1.5rem;
               font-size: 1.6rem;
             }
 
-            cursor: pointer;
             a {
               color: $dropDown_li_color;
             }
           }
+
           .social__network {
             display: flex;
-            padding: 0 4rem;
-
-            padding-bottom: 5.6rem;
-
             gap: 1.5rem;
+            padding: 0 4rem;
+            padding-bottom: 5.6rem;
 
             @include responsive(small_phone) {
               padding: 0 1.5rem;
               padding-bottom: 3.2rem;
             }
+
             a {
               text-decoration: none;
               cursor: pointer;
               color: $tbc_logo_color;
+
               .social__net_div {
                 width: 4rem;
                 height: 4rem;
                 background-color: $social_network_icon_bg;
-
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
                 border-radius: 0.6rem;
 
                 &:hover {
@@ -250,15 +249,17 @@ body {
                     }
                   }
                 }
-              }
-              .social__net_div:hover {
-                background-color: $lang_bg_hover;
-                transition: 0.6s ease-out;
+
+                &:hover {
+                  background-color: $lang_bg_hover;
+                  transition: 0.6s ease-out;
+                }
               }
             }
           }
         }
       }
+
       .copyright__wrapper {
         width: 100%;
         border-top: 1px solid #eef1f1;

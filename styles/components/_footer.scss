@@ -11,27 +11,30 @@ body {
       max-width: 111rem;
       width: 100%;
       margin: 0 auto;
-
       padding-bottom: 4.5rem;
+
       .tbc_logo {
         display: flex;
         justify-content: space-between;
         padding-top: 4.5rem;
         padding-bottom: 5rem;
+
         div {
           cursor: pointer;
         }
+
         .language__wrapper {
           position: relative;
 
           .desktop__lang {
+            width: 6.38rem;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.6rem;
             padding: 0.8rem;
-
             cursor: pointer;
+
             @include responsive(tablet) {
               background-color: $social_network_icon_bg;
             }
@@ -42,15 +45,16 @@ body {
               font-weight: 700;
               line-height: 1.7;
             }
-          }
 
-          .desktop__lang:hover {
-            background-color: $lang_bg_hover;
-            border-radius: 0.4rem;
-            transition: background-color 0.25s ease-in-out;
+            &:hover {
+              background-color: $lang_bg_hover;
+              border-radius: 0.4rem;
+              transition: background-color 0.25s ease-in-out;
+            }
           }
 
           .desktop__lang_eng {
+            width: 100%;
             position: absolute;
             background-color: $white_color;
             display: flex;
@@ -58,19 +62,14 @@ body {
             justify-content: center;
             bottom: -53px;
             cursor: pointer;
-
             padding: 0.8rem 0;
-
-            width: 100%;
-
             border: 1px solid #e1e4e5;
             border-radius: 0.4rem;
-
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+
             span {
-              // background-color: black;
               text-align: center;
               padding: 0.4rem 0;
               color: $tbc_logo_color;
@@ -78,6 +77,7 @@ body {
               font-weight: 700;
               line-height: 1.7;
             }
+
             span:hover {
               background-color: $body_color;
               width: 100%;
@@ -93,6 +93,7 @@ body {
           }
 
           cursor: pointer;
+
           span {
             color: $tbc_logo_color;
             font-size: 1.4rem;
@@ -101,6 +102,7 @@ body {
           }
         }
       }
+
       .footer__description {
         display: flex;
         justify-content: space-between;
@@ -112,63 +114,70 @@ body {
           cursor: pointer;
           padding-bottom: 2.4rem;
         }
-        div {
-          p {
-            cursor: pointer;
-            color: $tbc_logo_color;
-          }
-          p:hover {
-            color: $arrow_anchor_color;
-          }
-          p:not(:last-child) {
-            margin-bottom: 2rem;
-          }
-        }
+
         div {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
           gap: 1.6rem;
+
+          p {
+            cursor: pointer;
+            color: $tbc_logo_color;
+            &:hover {
+              color: $arrow_anchor_color;
+            }
+          }
+
+          p:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+
           .contact__wrapper {
             display: flex;
             align-items: center;
 
             a {
               text-decoration: none;
-
               display: flex;
+
               span {
                 font-weight: 500;
                 margin-left: 1rem;
                 color: $tbc_logo_color;
-              }
-              span:hover {
-                text-decoration: underline;
+                &:hover {
+                  text-decoration: underline;
+                }
               }
             }
           }
+
           .social__networks {
             margin-top: 1.6rem;
-            //   font-weight: 700;
           }
+
           .social__network {
+            display: flex;
             flex-direction: row;
+
             a {
               text-decoration: none;
               cursor: pointer;
               color: $tbc_logo_color;
+
               .social__net_div {
                 width: 4rem;
                 height: 4rem;
                 background-color: $social_network_icon_bg;
-
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
                 border-radius: 0.6rem;
 
                 &:hover {
+                  background-color: $lang_bg_hover;
+                  transition: 0.6s ease-out;
+
                   svg {
                     path {
                       fill: $arrow_anchor_color;
@@ -176,10 +185,6 @@ body {
                     }
                   }
                 }
-              }
-              .social__net_div:hover {
-                background-color: $lang_bg_hover;
-                transition: 0.6s ease-out;
               }
             }
           }
@@ -207,12 +212,13 @@ body {
             color: $tbc_logo_color;
             font-size: 1.2rem;
             cursor: pointer;
-          }
-          p:hover {
-            color: $arrow_anchor_color;
+
+            &:hover {
+              color: $arrow_anchor_color;
+            }
           }
         }
-        .coryright {
+        .copyright {
           display: flex;
           align-items: center;
           gap: 0.8rem;
@@ -228,19 +234,16 @@ body {
     position: fixed;
     bottom: 3.2rem;
     right: 3.2rem;
-
     display: flex;
     flex-direction: column-reverse;
-
     gap: 1.2rem;
     cursor: pointer;
+
     .fixed__btn {
       width: 5.6rem;
       height: 5.6rem;
       background-color: $fixed_burger_Menu;
-
       border-radius: 50%;
-
       position: relative;
       transition: all 0.6s ease-in-out;
       display: flex;
@@ -251,21 +254,18 @@ body {
         width: 4px;
         height: 4px;
         background-color: $white_color;
-
         transition: all 0.6s ease-in-out;
-
         border-radius: 50%;
         display: block;
       }
+
       .fixed_menu::before,
       .fixed_menu::after {
         content: '';
-
         width: 0.4rem;
         height: 0.4rem;
         background-color: $white_color;
         position: absolute;
-
         border-radius: 50%;
         transition: all 0.6s ease-in-out;
       }
@@ -273,6 +273,7 @@ body {
       .fixed_menu::before {
         transform: translateY(-8px);
       }
+
       .fixed_menu::after {
         transform: translateY(8px);
       }
@@ -282,10 +283,12 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+
       .fixed_menu {
         transform: rotate(90deg);
         background-color: transparent;
         transition: all 0.6s ease-in-out;
+        transform: translate(-120%, 50%);
       }
 
       .fixed_menu::before {
@@ -305,11 +308,10 @@ body {
     }
     .hidden_divs {
       transition: transform 0.6s ease-in-out;
-      transform: translateY(0);
+
       .hidden_div {
         width: 5.6rem;
         height: 5.6rem;
-
         border-radius: 50%;
         background-color: $white_color;
         display: flex;
