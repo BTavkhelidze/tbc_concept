@@ -1,6 +1,7 @@
 .header__wrapper {
   width: 100%;
-
+  position: fixed;
+  z-index: 10;
   background-color: $white_color;
   @include responsive(small_phone) {
     overflow-x: hidden;
@@ -70,10 +71,7 @@
               transition: none;
 
               li {
-                // transition: all 0.6s ease-in-out;
-
                 a {
-                  // transition: all 0.6s ease-in-out;
                   font-size: 1.4rem;
                   color: $dropDown_li_color;
                 }
