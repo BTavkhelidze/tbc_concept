@@ -15,6 +15,10 @@
   margin: 0 auto;
 }
 
+@mixin border {
+  border: 0.1rem solid $swiper_border_color;
+}
+
 $l-pc: 1420px; // large PC screen size
 $pc: 1200px; // PC screen size.
 $l-tablet: 990px; // tablet screen size

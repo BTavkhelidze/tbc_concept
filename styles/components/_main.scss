@@ -3,20 +3,24 @@
 
   .tbc__concept {
     width: 100%;
-    padding: 8rem 0 4rem;
+    padding: 8rem 4rem;
+    // padding: 8rem 0 4rem;
 
     @include responsive(l-tablet) {
       padding: 0 4rem;
       padding-bottom: 5rem;
+      padding-top: 8rem;
     }
     @include responsive(phone) {
       width: 100%;
       padding: 0;
       padding-bottom: 4rem;
+      padding-top: 8rem;
     }
     @include responsive(small_phone) {
       width: 100%;
       padding-bottom: 3.6rem;
+      padding-top: 8rem;
     }
     .tbc__concept__content {
       @include container;
@@ -552,7 +556,7 @@
               width: 100%;
               height: 38.8rem;
               border-radius: 0.8rem;
-              border: 0.1rem solid $swiper_border_color;
+              @include border;
               overflow: hidden;
               position: relative;
 
@@ -615,10 +619,127 @@
   .get__app__wrapper {
     width: 100%;
     background-color: $white_color;
+    margin: 6rem 0;
+    padding: 0 4rem;
+    @include responsive(l-tablet) {
+      margin: 5rem 0;
+    }
+    @include responsive(phone) {
+      width: 100%;
+      padding: 2.4rem 4rem 5.6rem 4rem;
+    }
+
+    @include responsive(small_phone) {
+      padding: 2.4rem 1.5rem 5.6rem 1.5rem;
+    }
     .get__app__content {
       @include container;
-      background-color: #001682;
-      height: 20px;
+      display: flex;
+      padding: 5rem 0;
+      justify-content: space-between;
+      position: relative;
+
+      min-height: 374px;
+
+      @include responsive(l-tablet) {
+        min-height: 300px;
+      }
+      @include responsive(phone) {
+        flex-direction: column;
+      }
+
+      .get__app__description {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        justify-content: center;
+
+        @include responsive(phone) {
+          gap: 28px;
+          width: 100%;
+        }
+        h3 {
+          font-size: 2.4rem;
+          font-weight: 700;
+          line-height: 1.5;
+          color: $main_text_color;
+          @include responsive(phone) {
+            order: -2;
+          }
+        }
+        p {
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 1.7;
+          color: $tbc_logo_color;
+          margin-bottom: 0.8rem;
+        }
+        .get__app {
+          .get__app__desk {
+            display: flex;
+            gap: 1.6rem;
+            @include responsive(l-tablet) {
+              display: none;
+            }
+            a {
+              text-decoration: none;
+              padding: 1.6rem 3.2rem;
+              @include border;
+
+              &:hover {
+                background-color: $body_color;
+              }
+            }
+          }
+          .get__app__responsive {
+            display: none;
+            @include responsive(l-tablet) {
+              display: block;
+            }
+            a {
+              max-width: 15.9rem;
+              text-decoration: none;
+              padding: 1.6rem 3.2rem;
+              border: 0.1rem solid $arrow_anchor_color;
+              border-radius: 0.4rem;
+              display: flex;
+              transition: background-position 0.25s ease-in-out;
+              align-items: center;
+              justify-content: center;
+              &:hover {
+                background-color: $body_color;
+              }
+              @include responsive(phone) {
+                max-width: none;
+              }
+              span {
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: 1.33;
+                color: $arrow_anchor_color;
+              }
+            }
+          }
+        }
+        .get__app__img {
+          height: 90%;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          max-width: 37rem;
+          background-color: green;
+          @include responsive(phone) {
+            position: sticky;
+            order: -1;
+            height: 100%;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
     }
   }
 

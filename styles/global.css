@@ -673,12 +673,13 @@ button {
 }
 .mainContainer .tbc__concept {
   width: 100%;
-  padding: 8rem 0 4rem;
+  padding: 8rem 4rem;
 }
 @media only screen and (max-width: 990px) {
   .mainContainer .tbc__concept {
     padding: 0 4rem;
     padding-bottom: 5rem;
+    padding-top: 8rem;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -686,12 +687,14 @@ button {
     width: 100%;
     padding: 0;
     padding-bottom: 4rem;
+    padding-top: 8rem;
   }
 }
 @media only screen and (max-width: 480px) {
   .mainContainer .tbc__concept {
     width: 100%;
     padding-bottom: 3.6rem;
+    padding-top: 8rem;
   }
 }
 .mainContainer .tbc__concept .tbc__concept__content {
@@ -1275,13 +1278,144 @@ button {
 .mainContainer .get__app__wrapper {
   width: 100%;
   background-color: #ffffff;
+  margin: 6rem 0;
+  padding: 0 4rem;
+}
+@media only screen and (max-width: 990px) {
+  .mainContainer .get__app__wrapper {
+    margin: 5rem 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mainContainer .get__app__wrapper {
+    width: 100%;
+    padding: 2.4rem 4rem 5.6rem 4rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mainContainer .get__app__wrapper {
+    padding: 2.4rem 1.5rem 5.6rem 1.5rem;
+  }
 }
 .mainContainer .get__app__wrapper .get__app__content {
   max-width: 111rem;
   width: 100%;
   margin: 0 auto;
-  background-color: #001682;
-  height: 20px;
+  display: flex;
+  padding: 5rem 0;
+  justify-content: space-between;
+  position: relative;
+  min-height: 374px;
+}
+@media only screen and (max-width: 990px) {
+  .mainContainer .get__app__wrapper .get__app__content {
+    min-height: 300px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mainContainer .get__app__wrapper .get__app__content {
+    flex-direction: column;
+  }
+}
+.mainContainer .get__app__wrapper .get__app__content .get__app__description {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  justify-content: center;
+}
+@media only screen and (max-width: 768px) {
+  .mainContainer .get__app__wrapper .get__app__content .get__app__description {
+    gap: 28px;
+    width: 100%;
+  }
+}
+.mainContainer .get__app__wrapper .get__app__content .get__app__description h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #141719;
+}
+@media only screen and (max-width: 768px) {
+  .mainContainer .get__app__wrapper .get__app__content .get__app__description h3 {
+    order: -2;
+  }
+}
+.mainContainer .get__app__wrapper .get__app__content .get__app__description p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #555f62;
+  margin-bottom: 0.8rem;
+}
+.mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app .get__app__desk {
+  display: flex;
+  gap: 1.6rem;
+}
+@media only screen and (max-width: 990px) {
+  .mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app .get__app__desk {
+    display: none;
+  }
+}
+.mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app .get__app__desk a {
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+  border: 0.1rem solid #e1e4e5;
+}
+.mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app .get__app__desk a:hover {
+  background-color: #f9fafa;
+}
+.mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app .get__app__responsive {
+  display: none;
+}
+@media only screen and (max-width: 990px) {
+  .mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app .get__app__responsive {
+    display: block;
+  }
+}
+.mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app .get__app__responsive a {
+  max-width: 15.9rem;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+  border: 0.1rem solid #182cc0;
+  border-radius: 0.4rem;
+  display: flex;
+  transition: background-position 0.25s ease-in-out;
+  align-items: center;
+  justify-content: center;
+}
+.mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app .get__app__responsive a:hover {
+  background-color: #f9fafa;
+}
+@media only screen and (max-width: 768px) {
+  .mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app .get__app__responsive a {
+    max-width: none;
+  }
+}
+.mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app .get__app__responsive a span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.33;
+  color: #182cc0;
+}
+.mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app__img {
+  height: 90%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 37rem;
+  background-color: green;
+}
+@media only screen and (max-width: 768px) {
+  .mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app__img {
+    position: sticky;
+    order: -1;
+    height: 100%;
+  }
+}
+.mainContainer .get__app__wrapper .get__app__content .get__app__description .get__app__img img {
+  width: 100%;
+  height: 100%;
 }
 .mainContainer .banner__wrapper {
   width: 100%;
