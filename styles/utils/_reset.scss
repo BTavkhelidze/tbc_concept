@@ -2,6 +2,20 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: 'regular';
+  src: url(./../assets/fonts/TBCXRegular.dee156cc.woff2);
+}
+
+@font-face {
+  font-family: 'medium';
+  src: url(./../assets/fonts/TBCXMedium.8ef1248a.woff2);
+}
+
+@font-face {
+  font-family: 'bold';
+  src: url(./../assets/fonts/TBCXBold.6db5e61d.woff2);
+}
 
 *,
 *::before,
@@ -122,7 +136,7 @@ html {
 
 body {
   line-height: 1;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'TBCX', sans-serif;
   background-color: $body_color;
 }
 

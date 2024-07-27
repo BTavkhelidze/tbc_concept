@@ -10,10 +10,14 @@
     width: 100%;
     border-bottom: 0.1rem solid #eef1f1;
     height: 8rem;
-    padding: 0 4rem;
+    padding: 0 4.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include responsive(l-tablet) {
+      padding: 0 4.5rem;
+    }
 
     @include responsive(small_phone) {
       padding: 0 1.5rem;
@@ -305,7 +309,7 @@
     height: 24rem;
     padding: 3.2rem 0;
     z-index: 10;
-    padding: 20px 40px;
+    padding: 20px 4.7px;
     background-color: $white_color;
     display: flex;
     align-items: flex-end;
@@ -399,7 +403,18 @@
 
       .hidden_menu {
         padding: 0 4rem 3.6rem 4rem;
+        max-height: 0; // set max-height to 0 when menu is closed
+        overflow-y: hidden; // prevent content from being visible when menu is closed
+        transition: max-height 1.5s ease-in-out; // add transition effect
 
+        &.hidden {
+          max-height: 0; // keep max-height at 0 when menu is closed
+        }
+
+        // when menu is open, set max-height to a large value to accommodate content
+        &:not(.hidden) {
+          max-height: 100vh; // or some other value that is large enough to accommodate the content
+        }
         p {
           a {
             color: $tbc_logo_color;

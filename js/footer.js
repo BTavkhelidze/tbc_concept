@@ -1,9 +1,10 @@
 //! Footer mobile burger menu
 
-const br_menu_title = document.querySelectorAll('.br_menu_title');
-const hidden_menu = document.querySelectorAll('.hidden_menu');
+const br_menu_title = Array.from(document.querySelectorAll('.br_menu_title'));
+const hidden_menu = Array.from(document.querySelectorAll('.hidden_menu'));
+console.log(hidden_menu);
 
-const icon = document.querySelector('.closed');
+const icon = Array.from(document.querySelectorAll('.closed'));
 
 let currentIcon = './assets/svg/burger_menu_arrow_down.svg';
 let openMenuIndex = -1;
@@ -12,23 +13,27 @@ for (let i = 0; i < br_menu_title.length; i++) {
   br_menu_title[i].addEventListener('click', () => {
     // Close the previously opened menu if it exists and is different from the current one
     if (openMenuIndex !== -1 && openMenuIndex !== i) {
-      hidden_menu[openMenuIndex].classList.add('hidden');
+      if (hidden_menu[openMenuIndex]) {
+        hidden_menu[openMenuIndex].classList.add('hidden');
+      }
     }
 
     // Toggle the current menu
-    hidden_menu[i].classList.toggle('hidden');
+    if (hidden_menu[i]) {
+      hidden_menu[i].classList.toggle('hidden');
 
-    // Update the openMenuIndex
-    if (hidden_menu[i].classList.contains('hidden')) {
-      openMenuIndex = -1;
-      currentIcon = './assets/svg/burger_menu_arrow_down.svg';
-    } else {
-      openMenuIndex = i;
-      currentIcon = './assets/svg/burger_menu_arrow_up.svg';
+      // Update the openMenuIndex
+      if (hidden_menu[i].classList.contains('hidden')) {
+        openMenuIndex = -1;
+        currentIcon = './assets/svg/burger_menu_arrow_down.svg';
+      } else {
+        openMenuIndex = i;
+        currentIcon = './assets/svg/burger_menu_arrow_up.svg'; // Update the icon to arrow up
+      }
+
+      // Update the icon
+      icon[i].src = currentIcon;
     }
-
-    // Update the icon
-    icon.src = currentIcon;
   });
 }
 

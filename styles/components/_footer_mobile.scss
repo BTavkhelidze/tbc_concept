@@ -140,6 +140,7 @@ body {
 
           .hidden_menu {
             padding: 0 4rem 3.6rem 4rem;
+            transition: max-height 1.4s ease-in;
 
             p {
               a {
@@ -161,9 +162,16 @@ body {
 
           .hidden {
             display: none;
+            transition: max-height 1.4s ease-in;
           }
 
           .contactUs {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid $footer_burgerMenu_border_color;
+            width: 100%;
+
             padding: 5.6rem 4rem 3.2rem 4rem;
 
             @include responsive(small_phone) {

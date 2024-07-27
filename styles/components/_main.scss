@@ -3,11 +3,11 @@
 
   .tbc__concept {
     width: 100%;
-    padding: 8rem 4rem;
+    padding: 8rem 4.7rem;
     // padding: 8rem 0 4rem;
 
     @include responsive(l-tablet) {
-      padding: 0 4rem;
+      padding: 0 4.5rem;
       padding-bottom: 5rem;
       padding-top: 8rem;
     }
@@ -31,9 +31,9 @@
         display: flex;
         align-items: center;
 
-        @include responsive(phone) {
+        @include responsive(l-tablet) {
           width: 100%;
-          padding: 2.4rem 4rem 5.6rem 4rem;
+          padding: 2.4rem 4.5rem 5.6rem 4.5rem;
         }
 
         @include responsive(small_phone) {
@@ -58,7 +58,7 @@
       .tbcc__img__wrapper {
         width: 100%;
         height: 36rem;
-        background-image: url('../../assets/webp/concept_banner.webp');
+        background-image: url('./../assets/webp/concept_banner.webp');
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden;
@@ -149,17 +149,18 @@
     }
   }
   .page_message_wrapper {
-    padding: 0 4rem;
+    padding: 0 4.7rem;
 
     @include responsive(l-tablet) {
-      padding: 5rem 4rem;
+      padding: 5rem 4.5rem;
     }
     @include responsive(phone) {
-      padding: 4rem;
+      padding: 4rem 4.5rem;
     }
     @include responsive(small_phone) {
       padding: 3.6rem 1.5rem;
     }
+
     .message__content {
       @include container;
       padding: 6rem 0;
@@ -180,11 +181,17 @@
     }
   }
   .select__Package__wrapper {
-    padding: 6rem 4rem;
-
+    padding: 6rem 4.7rem;
+    @include responsive(l-tablet) {
+      padding: 5rem 4.5rem;
+    }
+    @include responsive(phone) {
+      padding: 4rem 4.5rem;
+    }
     @include responsive(small_phone) {
       padding: 3.6rem 1.5rem;
     }
+
     .select__Package__content {
       @include container;
       display: flex;
@@ -415,21 +422,27 @@
           transition: transform 0.3s ease-in-out;
         }
         .img__digital {
-          background-image: url('../../assets/webp/digital.webp');
+          background-image: url('./../assets/webp/digital.webp');
         }
         .img_premium {
-          background-image: url('../../assets/webp/premium.webp');
+          background-image: url('./../assets/webp/premium.webp');
         }
 
         .img_360 {
-          background-image: url('../../assets/webp/360part.webp');
+          background-image: url('./../assets/webp/360part.webp');
         }
       }
     }
   }
   .numbers__wrapper {
-    padding: 6rem 4rem;
+    padding: 6rem 4.7rem;
 
+    @include responsive(l-tablet) {
+      padding: 5rem 4.5rem;
+    }
+    @include responsive(phone) {
+      padding: 4rem 4.5rem;
+    }
     @include responsive(small_phone) {
       padding: 3.6rem 1.5rem;
     }
@@ -439,8 +452,7 @@
     //   padding: 0;
     //   padding-bottom: 4rem;
     // }
-    @include responsive(small_phone) {
-    }
+
     .numbers__content {
       @include container;
       display: flex;
@@ -489,7 +501,17 @@
   }
   .offers_wrapper {
     width: 100%;
-    padding: 6rem 4rem;
+    padding: 6rem 4.7rem;
+
+    @include responsive(l-tablet) {
+      padding: 5rem 4.5rem;
+    }
+    @include responsive(phone) {
+      padding: 4rem 4.5rem;
+    }
+    @include responsive(small_phone) {
+      padding: 3.6rem 1.5rem;
+    }
     .offers_container {
       @include container;
 
@@ -514,10 +536,7 @@
             text-decoration: underline;
             color: $arrow_anchor_color;
             font-size: 1.4rem;
-
-            @include responsive(phone) {
-              font-size: inherit;
-            }
+            font-weight: 700;
           }
           &:hover {
             svg {
@@ -532,29 +551,44 @@
           }
         }
       }
-      .offer_content {
-        padding: 0;
-        position: relative;
-        padding-top: 50px;
-        overflow: hidden;
+      .swiper {
+        margin-top: 5.3rem;
         display: flex;
-        gap: 4rem;
-        cursor: grab;
+        justify-content: space-between;
+        gap: 1.8rem;
         width: 100%;
+        height: 100%;
+        @include responsive(tablet) {
+          gap: 1rem;
+        }
 
+        @include responsive(phone) {
+          flex-direction: column;
+          align-items: center;
+          gap: 2.8rem;
+        }
         .swiper-wrapper {
           display: flex;
           justify-content: space-between;
           gap: 1.8rem;
-          overflow: visible;
+          padding-bottom: 3.8rem;
 
-          .offer__wrapper {
-            max-width: 41.9rem;
+          .swiper-slide {
+            width: auto;
+            max-width: 420.667px;
             width: 100%;
-
+            height: auto;
+            max-height: 40rem;
+            cursor: pointer;
+            &:hover {
+              box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 8px;
+              @include border;
+            }
             .offer {
+              max-width: 420.667px;
               width: 100%;
-              height: 38.8rem;
+
+              height: 100%;
               border-radius: 0.8rem;
               @include border;
               overflow: hidden;
@@ -562,7 +596,7 @@
 
               img {
                 width: 100%;
-                height: 25.6rem;
+                height: 60%;
               }
 
               .little__logo {
@@ -570,7 +604,7 @@
                 width: 100%;
                 height: 5.6rem;
                 position: absolute;
-                background-color: red;
+                background-color: $white_color;
                 right: 0;
                 top: 1.6rem;
                 border-radius: 6px 0 0 6px;
@@ -586,31 +620,47 @@
               .title {
                 display: flex;
                 flex-direction: column;
+                align-items: flex-start;
                 padding: 2.8rem;
                 gap: 1.6rem;
-
-                span {
-                  font-size: 1.2rem;
-                  font-weight: 700;
-                  color: $offers_grey_color;
+                width: 100%;
+                .title_desc {
+                  width: 100%;
+                  display: flex;
+                  justify-content: space-between;
+                  div {
+                    display: flex;
+                  }
+                  span {
+                    display: inline;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: $offers_grey_color;
+                  }
+                  span:not(:last-child) {
+                    margin-right: 1rem;
+                  }
                 }
 
                 h4 {
                   font-size: 1.6rem;
                   font-weight: 700;
+                  line-height: 30px;
                   color: $main_text_color;
                 }
               }
             }
           }
-          .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
+        }
+        .swiper-scrollbar {
+          // margin-top: 2rem;
+          // height: 2px;
+          background-color: $offers_grey_color;
+        }
+
+        .swiper-scrollbar-drag {
+          // width: 10px;
+          background-color: $arrow_anchor_color;
         }
       }
     }
@@ -620,9 +670,10 @@
     width: 100%;
     background-color: $white_color;
     margin: 6rem 0;
-    padding: 0 4rem;
+    padding: 0 4.7rem;
     @include responsive(l-tablet) {
       margin: 5rem 0;
+      padding: 0 4.5rem;
     }
     @include responsive(phone) {
       width: 100%;
@@ -743,6 +794,117 @@
     }
   }
 
+  .products__wrapper {
+    width: 100%;
+    padding: 6rem 4rem;
+    .products__content {
+      @include container;
+      .products__header {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+          font-size: 3.2rem;
+          font-weight: bold;
+          color: $dropDown_li_color;
+          @include responsive(l_pc) {
+            font-size: 2.4rem;
+          }
+        }
+      }
+
+      .swiper {
+        margin-top: 5.3rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1.8rem;
+        width: 100%;
+        height: 100%;
+        @include responsive(tablet) {
+          gap: 1rem;
+        }
+
+        @include responsive(phone) {
+          flex-direction: column;
+          align-items: center;
+          gap: 2.8rem;
+        }
+        .swiper-wrapper {
+          display: flex;
+          justify-content: space-between;
+          gap: 1.8rem;
+          padding-bottom: 3.8rem;
+
+          .swiper-slide {
+            width: auto;
+            max-width: 420.667px;
+            width: 100%;
+            height: auto;
+            min-height: 40rem;
+
+            .product {
+              max-width: 420.667px;
+              width: 100%;
+              height: 100%;
+              border-radius: 0.8rem;
+              @include border;
+              overflow: hidden;
+              position: relative;
+              cursor: pointer;
+              &:hover {
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 8px;
+                @include border;
+              }
+
+              img {
+                width: 100%;
+                min-height: 25.6rem;
+              }
+
+              .title {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2.8rem;
+                gap: 1.6rem;
+
+                .truncate-text {
+                  font-size: 1.2rem;
+                  font-weight: 400;
+                  color: $offers_grey_color;
+                  display: -webkit-box;
+                  -webkit-box-orient: vertical;
+                  -webkit-line-clamp: 4; /* Number of lines to display */
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  max-height: 6.8rem; /* Adjust based on your line-height and number of lines */
+                  line-height: 1.7; /* Ensure this matches your content's line-height */
+                  padding-bottom: 86px;
+                  span {
+                    font-weight: bold;
+                  }
+                }
+
+                h4 {
+                  font-size: 1.6rem;
+                  font-weight: 700;
+                  color: $main_text_color;
+                }
+              }
+            }
+          }
+        }
+        .swiper-scrollbar {
+          height: 1px;
+          background-color: $offers_grey_color;
+        }
+
+        .swiper-scrollbar-drag {
+          background-color: $arrow_anchor_color;
+        }
+      }
+    }
+  }
+
   .banner__wrapper {
     width: 100%;
     padding: 6rem 0;
@@ -750,7 +912,7 @@
     .tbcc__img__wrapper {
       width: 100%;
       height: 36rem;
-      background-image: url('../../assets/webp/concept_banner.webp');
+      background-image: url('./../assets/webp/concept_banner.webp');
       background-repeat: no-repeat;
       background-position: center;
       overflow: hidden;
@@ -835,6 +997,145 @@
             font-size: 1.2rem;
             font-weight: 700;
           }
+        }
+      }
+    }
+  }
+
+  .awards__wrapper {
+    width: 100%;
+    padding: 6rem 4.7rem;
+    @include responsive(l-tablet) {
+      padding: 5rem 4.5rem;
+    }
+    @include responsive(phone) {
+      padding: 4rem 4.5rem;
+    }
+    @include responsive(small_phone) {
+      padding: 3.6rem 1.5rem;
+    }
+    .awards__container {
+      @include container;
+      .awards__header {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+          font-size: 3.2rem;
+          font-weight: bold;
+          color: $dropDown_li_color;
+          @include responsive(l_pc) {
+            font-size: 2.4rem;
+          }
+        }
+        .see__more {
+          display: flex;
+          gap: 0.6rem;
+          align-items: center;
+          cursor: pointer;
+
+          p {
+            text-decoration: underline;
+            color: $arrow_anchor_color;
+            font-size: 1.4rem;
+
+            @include responsive(phone) {
+              font-size: inherit;
+            }
+          }
+          &:hover {
+            svg {
+              path {
+                fill: $tbc_logo_color;
+              }
+            }
+            p {
+              text-decoration: none;
+              color: $tbc_logo_color;
+            }
+          }
+        }
+      }
+      .swiper {
+        margin-top: 5.3rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1.8rem;
+        width: 100%;
+        height: 100%;
+        @include responsive(tablet) {
+          gap: 1rem;
+        }
+
+        @include responsive(phone) {
+          flex-direction: column;
+          align-items: center;
+          gap: 2.8rem;
+        }
+        .swiper-wrapper {
+          display: flex;
+          justify-content: space-between;
+          gap: 1.8rem;
+          padding-bottom: 3.8rem;
+
+          .swiper-slide {
+            width: auto;
+            max-width: 420.667px;
+            width: 100%;
+            height: auto;
+            padding: 20px;
+
+            .award {
+              max-width: 420.667px;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 2.4rem;
+              padding: 2.8rem;
+              border-radius: 0.8rem;
+              background-color: $white_color;
+
+              overflow: hidden;
+              position: relative;
+              cursor: pointer;
+              transition: box-shadow 0.5s ease-out;
+
+              &:hover {
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 8px;
+                @include border;
+              }
+              div {
+                img {
+                  width: auto;
+                  height: 5.2rem;
+                }
+              }
+
+              h4 {
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: $main_text_color;
+              }
+
+              p {
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 1.7;
+                color: $tbc_logo_color;
+              }
+            }
+          }
+        }
+        .swiper-scrollbar {
+          // margin-top: 2rem;
+          // height: 2px;
+          background-color: $offers_grey_color;
+        }
+
+        .swiper-scrollbar-drag {
+          // width: 10px;
+          background-color: $arrow_anchor_color;
         }
       }
     }

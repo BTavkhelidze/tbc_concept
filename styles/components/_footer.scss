@@ -2,7 +2,7 @@ body {
   .footer__wrapper {
     width: 100%;
     background-color: $white_color;
-    padding: 0px 40px;
+    padding: 0px 4.7px;
     @include responsive(phone) {
       display: none;
     }
