@@ -68,6 +68,10 @@
         padding: 8rem;
         flex: 1;
         background-size: 105%;
+        @include responsive(l_pc) {
+          padding: 9.5rem;
+          height: auto;
+        }
 
         @include responsive(l-tablet) {
           height: 45.2rem;
@@ -105,12 +109,18 @@
           h3 {
             font-size: 2.4rem;
             font-weight: 700;
+            @include responsive(l_pc) {
+              font-size: 2.8rem;
+            }
           }
 
           p {
             font-size: 1.4rem;
             font-weight: 400;
             line-height: 1.7;
+            @include responsive(l_pc) {
+              font-size: 1.6rem;
+            }
           }
 
           button {
@@ -136,7 +146,7 @@
               border-radius: 0.4rem;
 
               &:hover {
-                background-color: #3295ce;
+                background-color: $button_background_color;
                 transition: background-color 0.25s ease-in-out;
               }
             }
@@ -173,6 +183,9 @@
         font-weight: 500;
         line-height: 1.5;
         color: $dropDown_li_color;
+        @include responsive(l_pc) {
+          font-size: 3.6rem;
+        }
 
         @include responsive(phone) {
           font-size: 2.8rem;
@@ -521,9 +534,9 @@
           font-size: 3.2rem;
           font-weight: bold;
           color: $dropDown_li_color;
-          @include responsive(l_pc) {
-            font-size: 2.4rem;
-          }
+          // @include responsive(l_pc) {
+          //   font-size: 2.4rem;
+          // }
         }
         .see__more {
           display: flex;
@@ -557,6 +570,7 @@
         gap: 1.8rem;
         width: 100%;
         height: 100%;
+
         @include responsive(tablet) {
           gap: 1rem;
         }
@@ -677,7 +691,7 @@
     }
     @include responsive(phone) {
       width: 100%;
-      padding: 2.4rem 4rem 5.6rem 4rem;
+      padding: 2.4rem 4.5rem 5.6rem 4rem;
     }
 
     @include responsive(small_phone) {
@@ -796,7 +810,17 @@
 
   .products__wrapper {
     width: 100%;
-    padding: 6rem 4rem;
+    padding: 6rem 4.7rem;
+    @include responsive(l-tablet) {
+      padding: 5rem 4.5rem;
+    }
+
+    @include responsive(phone) {
+      padding: 4rem 4.5rem;
+    }
+    @include responsive(small_phone) {
+      padding: 3.6rem 1.5rem;
+    }
     .products__content {
       @include container;
       .products__header {
@@ -915,9 +939,20 @@
 
   .banner__wrapper {
     width: 100%;
-    padding: 6rem 4.5rem;
-    @include container;
+    padding: 6rem 4.7rem 0;
+    @include responsive(l-tablet) {
+      padding: 5rem 4.5rem 0;
+    }
+
+    @include responsive(phone) {
+      padding: 4rem 4.5rem 0;
+    }
+    @include responsive(small_phone) {
+      padding: 3.6rem 1.5rem;
+    }
+
     .tbcc__img__wrapper {
+      @include container;
       width: 100%;
       height: 36rem;
       background-image: url('./../assets/webp/concept_banner.webp');
@@ -928,6 +963,10 @@
       padding: 8rem;
       flex: 1;
       background-size: 105%;
+      @include responsive(l_pc) {
+        padding: 9.5rem;
+        height: auto;
+      }
 
       @include responsive(l-tablet) {
         height: 45.2rem;
@@ -965,11 +1004,17 @@
         h3 {
           font-size: 2.4rem;
           font-weight: 700;
+          @include responsive(l_pc) {
+            font-size: 2.8rem;
+          }
         }
 
         p {
           font-size: 1.4rem;
           font-weight: 400;
+          @include responsive(l_pc) {
+            font-size: 1.6rem;
+          }
         }
 
         button {

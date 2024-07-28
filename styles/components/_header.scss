@@ -6,6 +6,7 @@
   @include responsive(small_phone) {
     overflow-x: hidden;
   }
+
   .header__content__wrapper {
     width: 100%;
     border-bottom: 0.1rem solid #eef1f1;
@@ -71,6 +72,10 @@
               font-size: 1.4rem;
               line-height: 1.7;
               white-space: nowrap;
+
+              @include responsive(l_pc) {
+                font-size: 1.6rem;
+              }
             }
 
             .dropdown__list {
@@ -197,6 +202,9 @@
               font-size: 1.4rem;
               font-weight: 700;
               line-height: 1.7;
+              @include responsive(l_pc) {
+                font-size: 1.6rem;
+              }
             }
 
             @include responsive(l-tablet) {
@@ -220,7 +228,7 @@
             cursor: pointer;
             padding: 0.8rem 0;
             width: 100%;
-            border: 1px solid #e1e4e5;
+            @include border;
             border-radius: 0.4rem;
             opacity: 0;
             visibility: hidden;
@@ -535,7 +543,7 @@
 
     .copyright__wrapper {
       width: 100%;
-      border-top: 1px solid #eef1f1;
+      @include border;
       background-color: $body_color;
 
       .copyright_content {
@@ -590,6 +598,3 @@
     display: none;
   }
 }
-// body.noScroll {
-//   overflow: hidden;
-// }

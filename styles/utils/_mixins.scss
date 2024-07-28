@@ -19,7 +19,7 @@
   border: 0.1rem solid $swiper_border_color;
 }
 
-$l-pc: 1420px; // large PC screen size
+$l-pc: 1440px; // large PC screen size
 $pc: 1200px; // PC screen size.
 $l-tablet: 990px; // tablet screen size
 $tablet: 1070px; // Tablet screen size.
@@ -30,7 +30,7 @@ $pc-max: $pc - 1;
 
 @mixin responsive($media) {
   @if $media == l_pc {
-    @media only screen and (max-width: $l-pc) {
+    @media only screen and (min-width: $l-pc) {
       @content;
     }
   } @else if $media == pc {

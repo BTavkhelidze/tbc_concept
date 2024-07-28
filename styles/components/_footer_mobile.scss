@@ -17,7 +17,10 @@ body {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding: 3.6rem 4rem;
+        padding: 3.6rem 4.7rem;
+        @include responsive(l-tablet) {
+          padding: 3.6rem 4.5rem;
+        }
 
         @include responsive(small_phone) {
           padding: 3.2rem 1.5rem;
@@ -63,7 +66,7 @@ body {
             cursor: pointer;
             padding: 0.8rem 0;
             width: 100%;
-            border: 1px solid #e1e4e5;
+            @include border;
             border-radius: 0.4rem;
             opacity: 0;
             visibility: hidden;
@@ -84,7 +87,6 @@ body {
             }
           }
 
-          // Show .desktop__lang_eng when either .desktop__lang or .desktop__lang_eng is hovered
           .desktop__lang:hover ~ .desktop__lang_eng,
           .desktop__lang_eng:hover {
             opacity: 1;
@@ -115,7 +117,10 @@ body {
             justify-content: space-between;
             border-top: 1px solid $footer_burgerMenu_border_color;
             width: 100%;
-            padding: 3.6rem 4rem;
+            padding: 3.6rem 4.7rem;
+            @include responsive(l-tablet) {
+              padding: 3.6rem 4.5rem;
+            }
 
             @include responsive(small_phone) {
               padding: 3.6rem 1.5rem;
@@ -270,7 +275,7 @@ body {
 
       .copyright__wrapper {
         width: 100%;
-        border-top: 1px solid #eef1f1;
+        @include border;
         background-color: $body_color;
         .copyright_content {
           max-width: 111rem;

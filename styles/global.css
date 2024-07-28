@@ -260,6 +260,11 @@ button {
   line-height: 1.7;
   white-space: nowrap;
 }
+@media only screen and (min-width: 1440px) {
+  .header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li a {
+    font-size: 1.6rem;
+  }
+}
 .header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li .dropdown__list {
   position: absolute;
   top: 100px;
@@ -358,6 +363,11 @@ button {
   font-weight: 700;
   line-height: 1.7;
 }
+@media only screen and (min-width: 1440px) {
+  .header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper .desktop__lang span {
+    font-size: 1.6rem;
+  }
+}
 @media only screen and (max-width: 990px) {
   .header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .language__wrapper .desktop__lang {
     display: none;
@@ -378,7 +388,7 @@ button {
   cursor: pointer;
   padding: 0.8rem 0;
   width: 100%;
-  border: 1px solid #e1e4e5;
+  border: 0.1rem solid #e1e4e5;
   border-radius: 0.4rem;
   opacity: 0;
   visibility: hidden;
@@ -647,7 +657,7 @@ button {
 }
 .header__wrapper .header__burger__menu__wrapper .copyright__wrapper {
   width: 100%;
-  border-top: 1px solid #eef1f1;
+  border: 0.1rem solid #e1e4e5;
   background-color: #f9fafa;
 }
 .header__wrapper .header__burger__menu__wrapper .copyright__wrapper .copyright_content {
@@ -774,6 +784,12 @@ button {
   flex: 1;
   background-size: 105%;
 }
+@media only screen and (min-width: 1440px) {
+  .mainContainer .tbc__concept .tbc__concept__content .img__wrapper {
+    padding: 9.5rem;
+    height: auto;
+  }
+}
 @media only screen and (max-width: 990px) {
   .mainContainer .tbc__concept .tbc__concept__content .img__wrapper {
     height: 45.2rem;
@@ -816,10 +832,20 @@ button {
   font-size: 2.4rem;
   font-weight: 700;
 }
+@media only screen and (min-width: 1440px) {
+  .mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content h3 {
+    font-size: 2.8rem;
+  }
+}
 .mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content p {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.7;
+}
+@media only screen and (min-width: 1440px) {
+  .mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content p {
+    font-size: 1.6rem;
+  }
 }
 .mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content button {
   border: none;
@@ -882,6 +908,11 @@ button {
   font-weight: 500;
   line-height: 1.5;
   color: #141719;
+}
+@media only screen and (min-width: 1440px) {
+  .mainContainer .page_message_wrapper .message__content p {
+    font-size: 3.6rem;
+  }
 }
 @media only screen and (max-width: 768px) {
   .mainContainer .page_message_wrapper .message__content p {
@@ -1240,11 +1271,6 @@ button {
   font-weight: bold;
   color: #141719;
 }
-@media only screen and (max-width: 1420px) {
-  .mainContainer .offers_wrapper .offers_container .offers__header h2 {
-    font-size: 2.4rem;
-  }
-}
 .mainContainer .offers_wrapper .offers_container .offers__header .see__more {
   display: flex;
   gap: 0.6rem;
@@ -1385,7 +1411,7 @@ button {
 @media only screen and (max-width: 768px) {
   .mainContainer .get__app__wrapper {
     width: 100%;
-    padding: 2.4rem 4rem 5.6rem 4rem;
+    padding: 2.4rem 4.5rem 5.6rem 4rem;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -1515,7 +1541,22 @@ button {
 }
 .mainContainer .products__wrapper {
   width: 100%;
-  padding: 6rem 4rem;
+  padding: 6rem 4.7rem;
+}
+@media only screen and (max-width: 990px) {
+  .mainContainer .products__wrapper {
+    padding: 5rem 4.5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mainContainer .products__wrapper {
+    padding: 4rem 4.5rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mainContainer .products__wrapper {
+    padding: 3.6rem 1.5rem;
+  }
 }
 .mainContainer .products__wrapper .products__content {
   max-width: 111rem;
@@ -1531,7 +1572,7 @@ button {
   font-weight: bold;
   color: #141719;
 }
-@media only screen and (max-width: 1420px) {
+@media only screen and (min-width: 1440px) {
   .mainContainer .products__wrapper .products__content .products__header h2 {
     font-size: 2.4rem;
   }
@@ -1632,12 +1673,27 @@ button {
 }
 .mainContainer .banner__wrapper {
   width: 100%;
-  padding: 6rem 4.5rem;
+  padding: 6rem 4.7rem 0;
+}
+@media only screen and (max-width: 990px) {
+  .mainContainer .banner__wrapper {
+    padding: 5rem 4.5rem 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mainContainer .banner__wrapper {
+    padding: 4rem 4.5rem 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mainContainer .banner__wrapper {
+    padding: 3.6rem 1.5rem;
+  }
+}
+.mainContainer .banner__wrapper .tbcc__img__wrapper {
   max-width: 111rem;
   width: 100%;
   margin: 0 auto;
-}
-.mainContainer .banner__wrapper .tbcc__img__wrapper {
   width: 100%;
   height: 36rem;
   background-image: url("./../assets/webp/concept_banner.webp");
@@ -1648,6 +1704,12 @@ button {
   padding: 8rem;
   flex: 1;
   background-size: 105%;
+}
+@media only screen and (min-width: 1440px) {
+  .mainContainer .banner__wrapper .tbcc__img__wrapper {
+    padding: 9.5rem;
+    height: auto;
+  }
 }
 @media only screen and (max-width: 990px) {
   .mainContainer .banner__wrapper .tbcc__img__wrapper {
@@ -1691,9 +1753,19 @@ button {
   font-size: 2.4rem;
   font-weight: 700;
 }
+@media only screen and (min-width: 1440px) {
+  .mainContainer .banner__wrapper .tbcc__img__wrapper .tbcc__img__content h3 {
+    font-size: 2.8rem;
+  }
+}
 .mainContainer .banner__wrapper .tbcc__img__wrapper .tbcc__img__content p {
   font-size: 1.4rem;
   font-weight: 400;
+}
+@media only screen and (min-width: 1440px) {
+  .mainContainer .banner__wrapper .tbcc__img__wrapper .tbcc__img__content p {
+    font-size: 1.6rem;
+  }
 }
 .mainContainer .banner__wrapper .tbcc__img__wrapper .tbcc__img__content button {
   border: none;
@@ -1760,7 +1832,7 @@ button {
   font-weight: bold;
   color: #141719;
 }
-@media only screen and (max-width: 1420px) {
+@media only screen and (min-width: 1440px) {
   .mainContainer .awards__wrapper .awards__container .awards__header h2 {
     font-size: 2.4rem;
   }
@@ -1911,7 +1983,13 @@ body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lan
   color: #555f62;
   font-size: 1.4rem;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 23.8px;
+}
+@media only screen and (min-width: 1440px) {
+  body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang span {
+    line-height: 27.2px;
+    font-size: 1.6rem;
+  }
 }
 body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang:hover {
   background-color: #eef1f1;
@@ -1962,6 +2040,13 @@ body .footer__wrapper .footer_content .footer__description {
   display: flex;
   justify-content: space-between;
   font-size: 1.4rem;
+  line-height: 23.8px;
+}
+@media only screen and (min-width: 1440px) {
+  body .footer__wrapper .footer_content .footer__description {
+    line-height: 27.2px;
+    font-size: 1.6rem;
+  }
 }
 body .footer__wrapper .footer_content .footer__description .footer__h3 {
   color: #141719;
@@ -1992,6 +2077,10 @@ body .footer__wrapper .footer_content .footer__description div .contact__wrapper
 body .footer__wrapper .footer_content .footer__description div .contact__wrapper a {
   text-decoration: none;
   display: flex;
+}
+body .footer__wrapper .footer_content .footer__description div .contact__wrapper a img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body .footer__wrapper .footer_content .footer__description div .contact__wrapper a span {
   font-weight: 500;
@@ -2215,7 +2304,12 @@ body .footer-mobile_wrapper .footer-mobile_content .tbc_logo {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 3.6rem 4rem;
+  padding: 3.6rem 4.7rem;
+}
+@media only screen and (max-width: 990px) {
+  body .footer-mobile_wrapper .footer-mobile_content .tbc_logo {
+    padding: 3.6rem 4.5rem;
+  }
 }
 @media only screen and (max-width: 480px) {
   body .footer-mobile_wrapper .footer-mobile_content .tbc_logo {
@@ -2259,7 +2353,7 @@ body .footer-mobile_wrapper .footer-mobile_content .tbc_logo .language__wrapper 
   cursor: pointer;
   padding: 0.8rem 0;
   width: 100%;
-  border: 1px solid #e1e4e5;
+  border: 0.1rem solid #e1e4e5;
   border-radius: 0.4rem;
   opacity: 0;
   visibility: hidden;
@@ -2300,7 +2394,12 @@ body .footer-mobile_wrapper .footer-mobile_content .footer__mob_burger_wrapper .
   justify-content: space-between;
   border-top: 1px solid #d1d5d6;
   width: 100%;
-  padding: 3.6rem 4rem;
+  padding: 3.6rem 4.7rem;
+}
+@media only screen and (max-width: 990px) {
+  body .footer-mobile_wrapper .footer-mobile_content .footer__mob_burger_wrapper .footer__mob_burger_content .br_menu_title {
+    padding: 3.6rem 4.5rem;
+  }
 }
 @media only screen and (max-width: 480px) {
   body .footer-mobile_wrapper .footer-mobile_content .footer__mob_burger_wrapper .footer__mob_burger_content .br_menu_title {
@@ -2434,7 +2533,7 @@ body .footer-mobile_wrapper .footer-mobile_content .footer__mob_burger_wrapper .
 }
 body .footer-mobile_wrapper .footer-mobile_content .copyright__wrapper {
   width: 100%;
-  border-top: 1px solid #eef1f1;
+  border: 0.1rem solid #e1e4e5;
   background-color: #f9fafa;
 }
 body .footer-mobile_wrapper .footer-mobile_content .copyright__wrapper .copyright_content {
