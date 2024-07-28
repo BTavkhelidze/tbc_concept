@@ -48,6 +48,7 @@
       }
 
       .header__nav {
+        margin: 0 4rem;
         flex: 1;
 
         ul {
@@ -403,18 +404,7 @@
 
       .hidden_menu {
         padding: 0 4rem 3.6rem 4rem;
-        max-height: 0; // set max-height to 0 when menu is closed
-        overflow-y: hidden; // prevent content from being visible when menu is closed
-        transition: max-height 1.5s ease-in-out; // add transition effect
 
-        &.hidden {
-          max-height: 0; // keep max-height at 0 when menu is closed
-        }
-
-        // when menu is open, set max-height to a large value to accommodate content
-        &:not(.hidden) {
-          max-height: 100vh; // or some other value that is large enough to accommodate the content
-        }
         p {
           a {
             color: $tbc_logo_color;

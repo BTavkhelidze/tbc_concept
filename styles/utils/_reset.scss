@@ -3,18 +3,21 @@
    License: none (public domain)
 */
 @font-face {
-  font-family: 'regular';
+  font-family: 'TBCX';
   src: url(./../assets/fonts/TBCXRegular.dee156cc.woff2);
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: 'medium';
+  font-family: 'TBCX';
   src: url(./../assets/fonts/TBCXMedium.8ef1248a.woff2);
+  font-weight: 500;
 }
 
 @font-face {
-  font-family: 'bold';
+  font-family: 'TBCX';
   src: url(./../assets/fonts/TBCXBold.6db5e61d.woff2);
+  font-weight: bold;
 }
 
 *,
