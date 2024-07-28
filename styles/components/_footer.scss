@@ -1,0 +1,394 @@
+body {
+  .footer__wrapper {
+    width: 100%;
+    background-color: $white_color;
+    padding: 0px 4.7rem;
+    @include responsive(l-tablet) {
+    }
+    @include responsive(phone) {
+      display: none;
+    }
+
+    .footer_content {
+      @include container;
+      padding-bottom: 4.5rem;
+      // padding: 0px 4.7px;
+
+      .tbc_logo {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 4.5rem;
+        padding-bottom: 5rem;
+
+        div {
+          cursor: pointer;
+        }
+
+        .language__wrapper {
+          position: relative;
+
+          .desktop__lang {
+            width: 6.38rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 0.8rem;
+            cursor: pointer;
+
+            @include responsive(tablet) {
+              background-color: $social_network_icon_bg;
+            }
+
+            span {
+              color: $tbc_logo_color;
+              font-size: 1.4rem;
+              font-weight: 700;
+              line-height: 23.8px;
+              @include responsive(l_pc) {
+                line-height: 27.2px;
+                font-size: 1.6rem;
+              }
+            }
+
+            &:hover {
+              background-color: $lang_bg_hover;
+              border-radius: 0.4rem;
+              transition: background-color 0.25s ease-in-out;
+            }
+          }
+
+          .desktop__lang_eng {
+            width: 100%;
+            position: absolute;
+            background-color: $white_color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: -53px;
+            cursor: pointer;
+            padding: 0.8rem 0;
+            border: 1px solid #e1e4e5;
+            border-radius: 0.4rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+
+            span {
+              text-align: center;
+              padding: 0.4rem 0;
+              color: $tbc_logo_color;
+              font-size: 1.4rem;
+              font-weight: 700;
+              line-height: 1.7;
+            }
+
+            span:hover {
+              background-color: $body_color;
+              width: 100%;
+            }
+          }
+
+          // Show .desktop__lang_eng when either .desktop__lang or .desktop__lang_eng is hovered
+          .desktop__lang:hover ~ .desktop__lang_eng,
+          .desktop__lang_eng:hover {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+          }
+
+          cursor: pointer;
+
+          span {
+            color: $tbc_logo_color;
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1.7;
+          }
+        }
+      }
+
+      .footer__description {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        line-height: 23.8px;
+
+        @include responsive(l_pc) {
+          line-height: 27.2px;
+          font-size: 1.6rem;
+        }
+
+        .footer__h3 {
+          color: $main_text_color;
+          font-weight: 700;
+          cursor: pointer;
+          padding-bottom: 2.4rem;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1.6rem;
+
+          p {
+            cursor: pointer;
+            color: $tbc_logo_color;
+            &:hover {
+              color: $arrow_anchor_color;
+            }
+          }
+
+          p:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+
+          .contact__wrapper {
+            display: flex;
+            align-items: center;
+
+            a {
+              text-decoration: none;
+              display: flex;
+              img {
+                object-fit: contain;
+              }
+
+              span {
+                font-weight: 500;
+                margin-left: 1rem;
+                color: $tbc_logo_color;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+
+          .social__networks {
+            margin-top: 1.6rem;
+          }
+
+          .social__network {
+            display: flex;
+            flex-direction: row;
+
+            a {
+              text-decoration: none;
+              cursor: pointer;
+              color: $tbc_logo_color;
+
+              .social__net_div {
+                width: 4rem;
+                height: 4rem;
+                background-color: $social_network_icon_bg;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0.6rem;
+
+                &:hover {
+                  background-color: $lang_bg_hover;
+                  transition: 0.6s ease-out;
+
+                  svg {
+                    path {
+                      fill: $arrow_anchor_color;
+                      transition: 0.6s ease-out;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .copyright__wrapper {
+      width: 100%;
+      border-top: 1px solid #eef1f1;
+
+      .copyright_content {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        padding: 2.8rem 0;
+
+        .privacy {
+          display: flex;
+          align-items: center;
+          gap: 3.5rem;
+
+          p {
+            color: $tbc_logo_color;
+            font-size: 1.2rem;
+            cursor: pointer;
+            &:hover {
+              color: $arrow_anchor_color;
+            }
+          }
+        }
+
+        .copyright {
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+
+          p {
+            font-size: 1.2rem;
+            color: $tbc_logo_color;
+          }
+        }
+      }
+    }
+  }
+  .fixed__btn__wrapper {
+    position: fixed;
+    bottom: 3.2rem;
+    right: 3.2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 1.2rem;
+    cursor: pointer;
+    z-index: 20;
+
+    .fixed__btn {
+      width: 5.6rem;
+      height: 5.6rem;
+      background-color: $fixed_burger_Menu;
+      border-radius: 50%;
+      position: relative;
+      transition: all 0.6s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .fixed_menu {
+        width: 4px;
+        height: 4px;
+        background-color: $white_color;
+        transition: all 0.6s ease-in-out;
+        border-radius: 50%;
+        display: block;
+      }
+
+      .fixed_menu::before,
+      .fixed_menu::after {
+        content: '';
+        width: 0.4rem;
+        height: 0.4rem;
+        background-color: $white_color;
+        position: absolute;
+        border-radius: 50%;
+        transition: all 0.6s ease-in-out;
+      }
+
+      .fixed_menu::before {
+        transform: translateY(-8px);
+      }
+
+      .fixed_menu::after {
+        transform: translateY(8px);
+      }
+    }
+
+    .open__fixed__menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .fixed_menu {
+        transform: rotate(90deg);
+        background-color: transparent;
+        transition: all 0.6s ease-in-out;
+        transform: translate(-120%, 50%);
+      }
+
+      .fixed_menu::before {
+        border-radius: 1px;
+        width: 1.5rem;
+        height: 0.2rem;
+        transform: rotate(-45deg);
+      }
+      .fixed_menu::after {
+        border-radius: 1px;
+        width: 1.5rem;
+        height: 0.2rem;
+        transform: rotate(45deg);
+      }
+    }
+
+    .hidden_divs {
+      transition: transform 0.6s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      .hidden_div_wrapper {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        position: relative; /* Add this line */
+
+        .hidden_div {
+          width: 5.6rem;
+          height: 5.6rem;
+          border-radius: 50%;
+          background-color: $white_color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1.2rem;
+        }
+
+        .fixed__menu__desc__wrapper {
+          width: 150px;
+          order: -1;
+          position: absolute; /* Add this line */
+          right: 110%; /* Add this line */
+          display: none;
+          align-items: center;
+          justify-content: center;
+
+          .desc {
+            // width: auto;
+            height: 4rem;
+            border-radius: 0.6rem;
+            flex: 1;
+            color: $white_color;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.2rem;
+            font-size: 14px;
+            transition: opacity 0.25s ease-in-out;
+            background-color: $fixed_burger_Menu;
+          }
+        }
+
+        @media (min-width: 990px) {
+          .hidden_div:hover ~ .fixed__menu__desc__wrapper {
+            display: flex !important;
+          }
+          .hidden_div:hover {
+            background-color: $arrow_anchor_color_hover !important;
+            svg {
+              path {
+                fill: $white_color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .hidden {
+      display: none;
+      transform: translateY(100px); /* Adjust translate values as needed */
+      opacity: 0;
+    }
+  }
+}
