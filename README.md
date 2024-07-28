@@ -41,8 +41,8 @@
 
 პროექტის გასაშვებად საჭიროა :
 
-- გადმოწეროთ ზიპ ფაილი თქვენს კომპიუტერში ან დაკლონოთ რეპოზიტორი: `git clone https://github.com/your-username/your-repo-name.git`;
+- გადმოწეროთ ზიპ ფაილი თქვენს კომპიუტერში ან დაკლონოთ რეპოზიტორი: `git clone https://github.com/BTavkhelidze/tbc_concept;
 
 - გაუშვათ პროექტი Visual Studio Code_ში და დააჭიროთ "Go Live", რათა გაიხსნას თქვენს ბრაუზერში.
 - ასევე შესაძლებელია დააჭიროთ `index.html`\_ს გადმოწერილი ფაილში/
-- იმისთვის, რომ ნახოთ საიტი, დააჭირეთ მოცემულ ლინკს: [https://your-github-username.github.io/tbc-concept-webpage/]
+- იმისთვის, რომ ნახოთ საიტი, დააჭირეთ მოცემულ ლინკს: [https://btavkhelidze.github.io/tbc_concept/] 
