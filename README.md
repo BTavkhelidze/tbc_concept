@@ -5,7 +5,7 @@
 - [introduction](#introduction)
 - [Features](#features)
 - [Contributing](#Contributing)
-- [Used_Technology](#Used Technology)
+- [Used_Technology](#Used_Technology)
 - [Setup](#Setup)
 
 ## introduction
