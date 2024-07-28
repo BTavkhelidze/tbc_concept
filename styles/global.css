@@ -1326,7 +1326,6 @@ button {
 }
 .mainContainer .offers_wrapper .offers_container .swiper .swiper-wrapper .swiper-slide:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 8px;
-  border: 0.1rem solid #e1e4e5;
 }
 .mainContainer .offers_wrapper .offers_container .swiper .swiper-wrapper .swiper-slide .offer {
   max-width: 420.667px;
@@ -1622,7 +1621,6 @@ button {
 }
 .mainContainer .products__wrapper .products__content .swiper .swiper-wrapper .swiper-slide .product:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 8px;
-  border: 0.1rem solid #e1e4e5;
 }
 .mainContainer .products__wrapper .products__content .swiper .swiper-wrapper .swiper-slide .product .img_wrapper {
   width: 100%;
@@ -1631,9 +1629,6 @@ button {
 .mainContainer .products__wrapper .products__content .swiper .swiper-wrapper .swiper-slide .product .img_wrapper img {
   width: 100%;
   height: 102%;
-}
-.mainContainer .products__wrapper .products__content .swiper .swiper-wrapper .swiper-slide .product .img_wrapper img:hover {
-  height: 104%;
 }
 .mainContainer .products__wrapper .products__content .swiper .swiper-wrapper .swiper-slide .product .title {
   display: flex;
@@ -2273,6 +2268,7 @@ body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .fixed__menu__desc__w
   }
   body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover {
     background-color: #4ca2d4 !important;
+    border: 32px solid #ffffff;
   }
   body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover svg path {
     fill: #ffffff;
