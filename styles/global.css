@@ -1267,7 +1267,7 @@ button {
   justify-content: space-between;
 }
 .mainContainer .offers_wrapper .offers_container .offers__header h2 {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   font-weight: bold;
   color: #141719;
 }
@@ -1567,14 +1567,9 @@ button {
   justify-content: space-between;
 }
 .mainContainer .products__wrapper .products__content .products__header h2 {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   font-weight: bold;
   color: #141719;
-}
-@media only screen and (min-width: 1440px) {
-  .mainContainer .products__wrapper .products__content .products__header h2 {
-    font-size: 2.4rem;
-  }
 }
 .mainContainer .products__wrapper .products__content .swiper {
   margin-top: 5.3rem;
@@ -1823,13 +1818,13 @@ button {
   justify-content: space-between;
 }
 .mainContainer .awards__wrapper .awards__container .awards__header h2 {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   font-weight: bold;
   color: #141719;
 }
 @media only screen and (min-width: 1440px) {
   .mainContainer .awards__wrapper .awards__container .awards__header h2 {
-    font-size: 2.4rem;
+    font-size: 3.2rem;
   }
 }
 .mainContainer .awards__wrapper .awards__container .awards__header .see__more {
@@ -1958,10 +1953,8 @@ body .footer__wrapper .footer_content .tbc_logo div {
 }
 body .footer__wrapper .footer_content .tbc_logo .language__wrapper {
   position: relative;
-  cursor: pointer;
 }
 body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang {
-  width: 6.38rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1969,21 +1962,20 @@ body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lan
   padding: 0.8rem;
   cursor: pointer;
 }
-@media only screen and (max-width: 1070px) {
-  body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang {
-    background-color: #f9fafa;
-  }
-}
 body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang span {
   color: #555f62;
   font-size: 1.4rem;
   font-weight: 700;
-  line-height: 23.8px;
+  line-height: 1.7;
 }
 @media only screen and (min-width: 1440px) {
   body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang span {
-    line-height: 27.2px;
     font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 990px) {
+  body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang {
+    display: none;
   }
 }
 body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang:hover {
@@ -1992,7 +1984,6 @@ body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lan
   transition: background-color 0.25s ease-in-out;
 }
 body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lang_eng {
-  width: 100%;
   position: absolute;
   background-color: #ffffff;
   display: flex;
@@ -2001,7 +1992,8 @@ body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lan
   bottom: -53px;
   cursor: pointer;
   padding: 0.8rem 0;
-  border: 1px solid #e1e4e5;
+  width: 100%;
+  border: 0.1rem solid #e1e4e5;
   border-radius: 0.4rem;
   opacity: 0;
   visibility: hidden;
@@ -2025,11 +2017,57 @@ body .footer__wrapper .footer_content .tbc_logo .language__wrapper .desktop__lan
   visibility: visible;
   transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
 }
-body .footer__wrapper .footer_content .tbc_logo .language__wrapper span {
-  color: #555f62;
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1.7;
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .buger__menu {
+  width: 2rem;
+  height: 1.8rem;
+  display: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.6s ease-in-out;
+}
+@media only screen and (max-width: 990px) {
+  body .footer__wrapper .footer_content .tbc_logo .language__wrapper .buger__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .buger__menu .burger_menu_btn {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #555f62;
+  display: block;
+  transition: all 0.6s ease-in-out;
+  border-radius: 0.1rem;
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .buger__menu .burger_menu_btn:before, body .footer__wrapper .footer_content .tbc_logo .language__wrapper .buger__menu .burger_menu_btn:after {
+  content: "";
+  border-radius: 0.1rem;
+  position: absolute;
+  height: 0.2rem;
+  background-color: #555f62;
+  transition: all 0.6s ease-in-out;
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .buger__menu .burger_menu_btn:before {
+  width: 40%;
+  transform: translateY(-6px);
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .buger__menu .burger_menu_btn:after {
+  width: 80%;
+  transform: translateY(6px);
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .open .burger_menu_btn {
+  transform: rotate(90deg);
+  background-color: transparent;
+  transition: all 0.6s ease-in-out;
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .open .burger_menu_btn:before {
+  width: 100%;
+  transform: rotate(45deg);
+}
+body .footer__wrapper .footer_content .tbc_logo .language__wrapper .open .burger_menu_btn:after {
+  width: 100%;
+  transform: rotate(-45deg);
 }
 body .footer__wrapper .footer_content .footer__description {
   display: flex;
@@ -2239,6 +2277,12 @@ body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div {
   justify-content: center;
   gap: 1.2rem;
 }
+body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover {
+  background-color: #3295ce;
+}
+body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover svg path {
+  fill: #ffffff;
+}
 body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .fixed__menu__desc__wrapper {
   width: 150px;
   order: -1;
@@ -2262,22 +2306,30 @@ body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .fixed__menu__desc__w
   transition: opacity 0.25s ease-in-out;
   background-color: #424a4d;
 }
-@media (min-width: 990px) {
-  body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover ~ .fixed__menu__desc__wrapper {
-    display: flex !important;
-  }
-  body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover {
-    background-color: #4ca2d4 !important;
-    border: 32px solid #ffffff;
-  }
-  body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover svg path {
-    fill: #ffffff;
-  }
+body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .fixed__menu__desc__wrapper .desc:hover {
+  background-color: #4ca2d4;
+}
+body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .fixed__menu__desc__wrapper .desc:hover svg path {
+  fill: #ffffff;
+}
+body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover ~ .fixed__menu__desc__wrapper {
+  display: flex;
 }
 body .fixed__btn__wrapper .hidden {
   display: none;
   transform: translateY(100px); /* Adjust translate values as needed */
   opacity: 0;
+}
+@media only screen and (max-width: 1070px) {
+  body .fixed__btn__wrapper .hidden_div:hover {
+    background-color: #ffffff;
+  }
+  body .fixed__btn__wrapper .hidden_div:hover svg path {
+    fill: initial;
+  }
+  body .fixed__btn__wrapper .hidden_div:hover ~ .fixed__menu__desc__wrapper {
+    display: none;
+  }
 }
 
 body .footer-mobile_wrapper {
