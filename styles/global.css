@@ -256,7 +256,9 @@ button {
 }
 .header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li a {
   color: #222;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  white-space: nowrap;
 }
 .header__wrapper .header__content__wrapper .header__content .header__nav ul .parent__li .dropdown__list {
   position: absolute;
@@ -333,6 +335,7 @@ button {
   font-size: 1.4rem;
   line-height: 1.9rem;
   color: #182cc0;
+  text-wrap: nowrap;
 }
 .header__wrapper .header__content__wrapper .header__content .header__btns_wrapper .subscribe__btn p:hover {
   color: #4ca2d4;
@@ -759,7 +762,7 @@ button {
   line-height: 1.7;
   color: #141719;
 }
-.mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper {
+.mainContainer .tbc__concept .tbc__concept__content .img__wrapper {
   width: 100%;
   height: 36rem;
   background-image: url("./../assets/webp/concept_banner.webp");
@@ -772,7 +775,7 @@ button {
   background-size: 105%;
 }
 @media only screen and (max-width: 990px) {
-  .mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper {
+  .mainContainer .tbc__concept .tbc__concept__content .img__wrapper {
     height: 45.2rem;
     padding: 3.6rem 4.5rem;
     display: flex;
@@ -782,19 +785,19 @@ button {
   }
 }
 @media only screen and (max-width: 768px) {
-  .mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper {
+  .mainContainer .tbc__concept .tbc__concept__content .img__wrapper {
     height: 45.2rem;
     padding: 3.6rem 4rem;
     border-radius: 0px;
   }
 }
 @media only screen and (max-width: 480px) {
-  .mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper {
+  .mainContainer .tbc__concept .tbc__concept__content .img__wrapper {
     padding: 2rem 1.5rem;
     height: 36rem;
   }
 }
-.mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper .tbcc__img__content {
+.mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content {
   max-width: 45rem;
   height: 20rem;
   display: flex;
@@ -804,21 +807,21 @@ button {
   gap: 2rem;
 }
 @media only screen and (max-width: 768px) {
-  .mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper .tbcc__img__content {
+  .mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content {
     max-width: 100%;
     width: 100%;
   }
 }
-.mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper .tbcc__img__content h3 {
+.mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content h3 {
   font-size: 2.4rem;
   font-weight: 700;
 }
-.mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper .tbcc__img__content p {
+.mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content p {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.7;
 }
-.mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper .tbcc__img__content button {
+.mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content button {
   border: none;
   margin-top: 0.9rem;
   border-radius: 0.4rem;
@@ -826,12 +829,12 @@ button {
   align-self: flex-start;
 }
 @media only screen and (max-width: 768px) {
-  .mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper .tbcc__img__content button {
+  .mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content button {
     max-width: 100%;
     width: 100%;
   }
 }
-.mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper .tbcc__img__content button a {
+.mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content button a {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -841,11 +844,11 @@ button {
   color: #ffffff;
   border-radius: 0.4rem;
 }
-.mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper .tbcc__img__content button a:hover {
+.mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content button a:hover {
   background-color: #3295ce;
   transition: background-color 0.25s ease-in-out;
 }
-.mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper .tbcc__img__content button p {
+.mainContainer .tbc__concept .tbc__concept__content .img__wrapper .img__content button span {
   line-height: 1.33;
   font-size: 1.2rem;
   font-weight: 700;
