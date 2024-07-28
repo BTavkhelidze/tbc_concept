@@ -79,7 +79,7 @@
         @include responsive(phone) {
           height: 45.2rem;
           padding: 3.6rem 4rem;
-          border-radius: 0;
+          border-radius: 0px;
         }
         @include responsive(small_phone) {
           padding: 2rem 1.5rem;
@@ -421,6 +421,7 @@
           width: 100%;
           height: 100%;
           transition: transform 0.3s ease-in-out;
+          filter: brightness(0.7);
         }
         .img__digital {
           background-image: url('./../assets/webp/digital.webp');
@@ -610,6 +611,7 @@
                 top: 1.6rem;
                 border-radius: 6px 0 0 6px;
                 overflow: hidden;
+                text-align: center;
 
                 img {
                   width: 100%;
@@ -887,6 +889,7 @@
                   max-height: 6.8rem; /* Adjust based on your line-height and number of lines */
                   line-height: 1.7; /* Ensure this matches your content's line-height */
                   padding-bottom: 86px;
+                  padding-right: 5px;
                   span {
                     font-weight: bold;
                   }
@@ -915,7 +918,7 @@
 
   .banner__wrapper {
     width: 100%;
-    padding: 6rem 0;
+    padding: 6rem 4.5rem;
     @include container;
     .tbcc__img__wrapper {
       width: 100%;
@@ -1090,7 +1093,6 @@
             max-width: 420.667px;
             width: 100%;
             height: auto;
-            padding: 20px;
 
             .award {
               max-width: 420.667px;
@@ -1111,12 +1113,13 @@
 
               &:hover {
                 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 8px;
-                @include border;
+                // @include border;
               }
               div {
+                height: 5.2rem;
                 img {
                   width: auto;
-                  height: 5.2rem;
+                  height: 100%;
                 }
               }
 

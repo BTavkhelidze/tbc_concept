@@ -37,7 +37,11 @@
           display: none;
         }
       }
-
+      .tbcLogo_eng {
+        @include responsive(phone) {
+          display: none;
+        }
+      }
       .tbcLogo_mob {
         cursor: pointer;
         display: none;

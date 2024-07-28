@@ -224,6 +224,11 @@ button {
     display: none;
   }
 }
+@media only screen and (max-width: 768px) {
+  .header__wrapper .header__content__wrapper .header__content .tbcLogo_eng {
+    display: none;
+  }
+}
 .header__wrapper .header__content__wrapper .header__content .tbcLogo_mob {
   cursor: pointer;
   display: none;
@@ -780,7 +785,7 @@ button {
   .mainContainer .tbc__concept .tbc__concept__content .tbcc__img__wrapper {
     height: 45.2rem;
     padding: 3.6rem 4rem;
-    border-radius: 0;
+    border-radius: 0px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -1115,6 +1120,7 @@ button {
   width: 100%;
   height: 100%;
   transition: transform 0.3s ease-in-out;
+  filter: brightness(0.7);
 }
 .mainContainer .select__Package__wrapper .select__Package__content .selectPack_grid .img__digital {
   background-image: url("./../assets/webp/digital.webp");
@@ -1316,6 +1322,7 @@ button {
   top: 1.6rem;
   border-radius: 6px 0 0 6px;
   overflow: hidden;
+  text-align: center;
 }
 .mainContainer .offers_wrapper .offers_container .swiper .swiper-wrapper .swiper-slide .offer .little__logo img {
   width: 100%;
@@ -1603,6 +1610,7 @@ button {
   max-height: 6.8rem; /* Adjust based on your line-height and number of lines */
   line-height: 1.7; /* Ensure this matches your content's line-height */
   padding-bottom: 86px;
+  padding-right: 5px;
 }
 .mainContainer .products__wrapper .products__content .swiper .swiper-wrapper .swiper-slide .product .title .truncate-text span {
   font-weight: bold;
@@ -1621,7 +1629,7 @@ button {
 }
 .mainContainer .banner__wrapper {
   width: 100%;
-  padding: 6rem 0;
+  padding: 6rem 4.5rem;
   max-width: 111rem;
   width: 100%;
   margin: 0 auto;
@@ -1808,7 +1816,6 @@ button {
   max-width: 420.667px;
   width: 100%;
   height: auto;
-  padding: 20px;
 }
 .mainContainer .awards__wrapper .awards__container .swiper .swiper-wrapper .swiper-slide .award {
   max-width: 420.667px;
@@ -1828,11 +1835,13 @@ button {
 }
 .mainContainer .awards__wrapper .awards__container .swiper .swiper-wrapper .swiper-slide .award:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 8px;
-  border: 0.1rem solid #e1e4e5;
+}
+.mainContainer .awards__wrapper .awards__container .swiper .swiper-wrapper .swiper-slide .award div {
+  height: 5.2rem;
 }
 .mainContainer .awards__wrapper .awards__container .swiper .swiper-wrapper .swiper-slide .award div img {
   width: auto;
-  height: 5.2rem;
+  height: 100%;
 }
 .mainContainer .awards__wrapper .awards__container .swiper .swiper-wrapper .swiper-slide .award h4 {
   font-size: 1.6rem;
@@ -1855,7 +1864,7 @@ button {
 body .footer__wrapper {
   width: 100%;
   background-color: #ffffff;
-  padding: 0px 4.7px;
+  padding: 0px 4.7rem;
 }
 @media only screen and (max-width: 768px) {
   body .footer__wrapper {
@@ -2130,7 +2139,8 @@ body .fixed__btn__wrapper .hidden_divs {
 body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2.5rem;
+  position: relative; /* Add this line */
 }
 body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div {
   width: 5.6rem;
@@ -2142,26 +2152,39 @@ body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div {
   justify-content: center;
   gap: 1.2rem;
 }
-body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover {
-  background-color: #3295ce;
-}
-body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover svg path {
-  fill: #ffffff;
-}
 body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .fixed__menu__desc__wrapper {
+  width: 150px;
   order: -1;
+  position: absolute; /* Add this line */
+  right: 110%; /* Add this line */
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .fixed__menu__desc__wrapper .desc {
-  width: 100px;
+  height: 4rem;
   border-radius: 0.6rem;
+  flex: 1;
   color: #ffffff;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.8rem 1.2rem;
-  height: 20px;
+  font-size: 14px;
+  transition: opacity 0.25s ease-in-out;
   background-color: #424a4d;
+}
+@media (min-width: 990px) {
+  body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover ~ .fixed__menu__desc__wrapper {
+    display: flex !important;
+  }
+  body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover {
+    background-color: #4ca2d4 !important;
+  }
+  body .fixed__btn__wrapper .hidden_divs .hidden_div_wrapper .hidden_div:hover svg path {
+    fill: #ffffff;
+  }
 }
 body .fixed__btn__wrapper .hidden {
   display: none;

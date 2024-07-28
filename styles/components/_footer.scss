@@ -2,7 +2,9 @@ body {
   .footer__wrapper {
     width: 100%;
     background-color: $white_color;
-    padding: 0px 4.7px;
+    padding: 0px 4.7rem;
+    @include responsive(l-tablet) {
+    }
     @include responsive(phone) {
       display: none;
     }
@@ -10,6 +12,7 @@ body {
     .footer_content {
       @include container;
       padding-bottom: 4.5rem;
+      // padding: 0px 4.7px;
 
       .tbc_logo {
         display: flex;
@@ -302,9 +305,8 @@ body {
         height: 0.2rem;
         transform: rotate(45deg);
       }
-
-      //hiden divs
     }
+
     .hidden_divs {
       transition: transform 0.6s ease-in-out;
       display: flex;
@@ -314,8 +316,9 @@ body {
       .hidden_div_wrapper {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        // flex-direction: row-reverse;
+        gap: 2.5rem;
+        position: relative; /* Add this line */
+
         .hidden_div {
           width: 5.6rem;
           height: 5.6rem;
@@ -325,33 +328,45 @@ body {
           align-items: center;
           justify-content: center;
           gap: 1.2rem;
-
-          &:hover {
-            background-color: $button_background_color;
-            svg {
-              path {
-                fill: $white_color;
-              }
-            }
-          }
         }
+
         .fixed__menu__desc__wrapper {
+          width: 150px;
           order: -1;
+          position: absolute; /* Add this line */
+          right: 110%; /* Add this line */
+          display: none;
+          align-items: center;
+          justify-content: center;
 
           .desc {
-            // padding: 0.8rem 1.2rem;
-            width: 100px;
-
+            // width: auto;
+            height: 4rem;
             border-radius: 0.6rem;
-
+            flex: 1;
             color: $white_color;
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 0.8rem 1.2rem;
-            height: 20px;
+            font-size: 14px;
+            transition: opacity 0.25s ease-in-out;
             background-color: $fixed_burger_Menu;
+          }
+        }
+
+        @media (min-width: 990px) {
+          .hidden_div:hover ~ .fixed__menu__desc__wrapper {
+            display: flex !important;
+          }
+          .hidden_div:hover {
+            background-color: $arrow_anchor_color_hover !important;
+            svg {
+              path {
+                fill: $white_color;
+              }
+            }
           }
         }
       }
